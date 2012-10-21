@@ -1,0 +1,448 @@
+@import url(../../../stylesheets/application.css);
+@import url(font-awesome.css);
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Light';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Bold Italic';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Light Italic';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Semibold Italic';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Extrabold';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Extrabold Italic';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxsBo4hlZyBvkZICS3KpNonM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Semibold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans Italic';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+/* global */
+
+body {
+	font-family: "Open Sans";
+}
+
+a, a:link, a:visited {
+	color: #00758b;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Open Sans";
+}
+
+/* top menu */
+
+#top-menu {
+	background: #343537; /* checked */
+	height: 15px;
+	padding: 7px 27px 7px 30px;
+}
+
+#top-menu a {
+	margin: 0 10px 0 0;
+}
+
+#top-menu a, #top-menu #loggedas {
+	font-weight: normal;
+	color: #E0E0E0; /* checked */
+}
+
+#top-menu a:hover {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* header */
+
+#header {
+	background: #E0E0E0; /* checked */
+	border-bottom: 1px solid #c6c6c6;
+	padding: 10px 30px 5px 30px;
+}
+
+#quick-search, #quick-search a {
+	color: #666666;
+	text-decoration: none;
+}
+
+#quick-search a:hover {
+	color: #D46E08; /* checked */
+}
+
+h1 {
+	font-family: "Open Sans Light";
+	font-size: 24px;
+	font-weight: normal;
+	color: #666666;
+	text-shadow: #ffffff 0px 1px 0px;
+}
+
+/* main*/
+
+#main {
+	background: #ffffff;
+}
+
+/* content */
+
+#content {
+	padding: 0;
+}
+
+/* main menu */
+
+#main-menu {
+	left: 20px;
+}
+
+#main-menu li {
+	margin: 0px 0px -1px 0px;
+}
+
+#main-menu li a {
+	font-family: "Open Sans";
+	font-weight: normal;
+	font-size: 13px;
+	color: #666666;
+	text-shadow: #ffffff 0px 1px 0px;
+}
+
+#main-menu li a:hover {
+	background: #E0E0E0;
+	color: #D46E08; /* checked */
+}
+
+#main-menu li a.selected, #main-menu li a.selected:hover {
+	background: #f8f8f8;
+	border: 1px solid #C6C6C6;
+	border-bottom: none;
+
+	-webkit-border-top-left-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+	-webkit-border-top-right-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+	        border-top-left-radius: 3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+	        border-top-right-radius: 3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+
+	/* useful if you don't want a bg color from leaking outside the border: */
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+/* content header */
+
+h2, .wiki h1 {
+	margin: 0;
+	padding: 10px 0px 10px 30px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #dfdfdf;
+
+	font-weight: normal;
+	color: #666666;
+	text-shadow: #ffffff 0px 1px 0px;
+	font-size: 24px;
+}
+
+/* contextual */
+
+.contextual {
+	padding: 0px 10px 0 0;
+}
+
+.icon {
+	padding: 0 0 0 10px;
+}
+
+[class^="icon-"]::before, [class*=" icon-"]::before {
+	margin: 0 3px 0 0;
+	text-decoration: none;
+}
+
+.icon-edit {
+	background: none;
+}
+
+.icon-edit:before {
+	content: "\f044";
+}
+
+.icon-fav-off {
+	background: none;
+}
+
+.icon-fav-off:before {
+	content: "\f006";
+}
+
+.icon-fav-on {
+	background: none;
+}
+
+.icon-fav {
+	background:none;
+}
+
+.icon-fav:before {
+	content: "\f005";
+}
+
+.icon-lock {
+	background: none;
+}
+
+.icon-unlock {
+	background: none;
+}
+
+.icon-move {
+	background: none;
+}
+
+.icon-move:before {
+	content: "\f0ad";
+}
+
+.icon-del {
+	background: none;
+}
+
+.icon-del:before {
+	content: "\f014";
+}
+
+.icon-history {
+	background: none;
+}
+
+.icon-history:before {
+	content: "\f0e2";
+}
+
+/* wiki */
+
+.wiki h2 {
+	padding: 0;
+	background: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+ul.projects div.root a.project {
+	font-family: "Open Sans";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*@import url(../../basecamp/stylesheets/application.css);
+
+
+
+/*body, #wrapper { background-color:#eee; font-family: helvetica, arial, sans-serif; }
+h1, h2, h3, h4 { font-family: helvetica, arial, sans-serif; }
+textarea.wiki-edit { font-family: helvetica, arial, sans-serif; }
+.contextual { font-family: helvetica, arial, sans-serif; }
+ul.projects div.root a.project { font-family: helvetica, arial, sans-serif; }*/
+
+
+
+
+/*#wrapper {
+	background: white;
+}
+
+#main {
+	background: white;
+	margin: 0;
+}
+
+#header {
+	background: #c8c8c8;
+	color: #666;
+}
+
+#main-menu li a {
+	background: #c8c8c8;
+	color: #555;
+}
+
+#main-menu li a:hover {
+	background: #c8c8c8;
+	color: #000;
+}
+
+#main-menu li a.selected, #main-menu li a.selected:hover {
+	background: #f8f8f8;
+}
+
+h2, .wiki h1 {
+	background: #f8f8f8;
+}
+
+h1 {
+	color: #000;
+}
+
+div.wiki {
+	margin-left: 24px;
+}
+
+div.wiki h1 {
+	margin-left: -34px;
+	font-weight: normal;
+}
+
+div.wiki h2 {
+	border-bottom: 1px solid #ccc;
+	margin-left: -24px;
+	font-weight: normal;
+}
+
+div.wiki h3 {
+	margin-left: -16px;
+	font-weight: normal;
+}
+
+div.wiki h4 {
+	margin-left: -8px;
+	font-weight: normal;
+}
+
+div.wiki img {
+	max-width: 98%;
+	padding: 6px;
+	background-color: #fcfcfc;
+	border: 1px solid #e4e4e4;
+}
+
+div.wiki table img {
+	max-width: 91%;
+	padding: 0;
+	border: none;
+}
+
+div.wiki ul {
+	padding-left: 18px;
+}
+
+div.wiki ol {
+	padding-left: 18px;
+}
+
+#preview {
+	margin-left: 0;
+}
+
+fieldset.preview {
+	padding-left: 34px
+}
+
+div.attachments {
+	margin-top: 40px;
+}
+
+
+
+
+
+#header h1 {
+	
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#header h1 a.root {
+	font-size: 80%;
+}
+
+div.flash.error, #errorExplanation {
+	
+	
+	display: none;
+}
+
+#sidebar {
+	width: 20%;
+}
+
+#content {
+	width: 76%;
+}*/
