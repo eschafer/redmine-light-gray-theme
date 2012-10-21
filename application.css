@@ -1,5 +1,4 @@
 @import url(../../../stylesheets/application.css);
-@import url(../fonts/open-sans.css);
 @import url(font-awesome.css);
 
 /*@font-face {
@@ -80,7 +79,7 @@
 /* global */
 
 body {
-	font-family: "OpenSansRegular";
+	font-family: "Open Sans";
 }
 
 a, a:link, a:visited {
@@ -88,7 +87,7 @@ a, a:link, a:visited {
 }
 
 h1, h2, h3, h4 {
-	font-family: "OpenSansRegular";
+	font-family: "Open Sans";
 }
 
 /* top menu */
@@ -131,7 +130,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-family: "OpenSansLight";
+	font-family: "Open Sans Light";
 	font-size: 24px;
 	font-weight: normal;
 	color: #666666;
@@ -161,7 +160,7 @@ h1 {
 }
 
 #main-menu li a {
-	font-family: "OpenSansRegular";
+	font-family: "Open Sans";
 	font-weight: normal;
 	font-size: 13px;
 	color: #666666;
@@ -292,7 +291,7 @@ h2, .wiki h1 {
 
 
 ul.projects div.root a.project {
-	font-family: "OpenSansRegular";
+	font-family: "Open Sans";
 }
 
 
