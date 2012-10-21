@@ -2,81 +2,6 @@
 @import url(../fonts/open-sans.css);
 @import url(font-awesome.css);
 
-/*@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}
-
-@font-face {
-	font-family: 'Open Sans Light';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}*/
-
-/*@font-face {
-	font-family: 'Open Sans Bold';
-	font-style: normal;
-	font-weight: 700;
-	src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Light';
-	font-style: normal;
-	font-weight: 300;
-	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Bold Italic';
-	font-style: italic;
-	font-weight: 700;
-	src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxhbnBKKEOwRKgsHDreGcocg.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Light Italic';
-	font-style: italic;
-	font-weight: 300;
-	src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Semibold Italic';
-	font-style: italic;
-	font-weight: 600;
-	src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Extrabold';
-	font-style: normal;
-	font-weight: 800;
-	src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Extrabold Italic';
-	font-style: italic;
-	font-weight: 800;
-	src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxsBo4hlZyBvkZICS3KpNonM.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Semibold';
-	font-style: normal;
-	font-weight: 600;
-	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans Italic';
-	font-style: italic;
-	font-weight: 400;
-	src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-}
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
-}*/
-
 /* global */
 
 body {
@@ -88,7 +13,7 @@ a, a:link, a:visited {
 }
 
 h1, h2, h3, h4 {
-	font-family: "OpenSansRegular";
+	font-family: "OpenSansLight";
 }
 
 /* top menu */
@@ -123,6 +48,7 @@ h1, h2, h3, h4 {
 
 #quick-search, #quick-search a {
 	color: #666666;
+	text-shadow: #ffffff 0px 1px 0px;
 	text-decoration: none;
 }
 
@@ -148,6 +74,14 @@ h1 {
 
 #content {
 	padding: 0;
+}
+
+/* right */
+
+.box {
+	padding: 0;
+	background: none;
+	border: none;
 }
 
 /* main menu */
@@ -190,7 +124,7 @@ h1 {
 /* content header */
 
 h2, .wiki h1 {
-	margin: 0;
+	margin: 0 0 0 -30px;
 	padding: 10px 0px 10px 30px;
 	background: #f8f8f8;
 	border-bottom: 1px solid #dfdfdf;
@@ -201,14 +135,87 @@ h2, .wiki h1 {
 	font-size: 24px;
 }
 
+#content {
+	margin: 0 0 0 30px;
+	width: 73%;
+}
+
 /* contextual */
 
 .contextual {
-	padding: 0px 10px 0 0;
+	padding: 15px 10px 0 0;
 }
+
+/* split content left */
+
+.splitcontentleft {
+	
+}
+
+/* activity */
+
+p.subtitle {
+	margin: 0px 0 10px 0;
+	font-style: normal;
+}
+
+/* wiki */
+
+p.breadcrumb {
+	margin: 0 0 0 -30px;
+	padding: 5px 0px 0px 30px;
+	background: #f8f8f8;
+}
+
+.wiki h2 {
+	padding: 10px 0 3px 0;
+	background: #ffffff;
+}
+
+.wiki h3 {
+	padding: 0;
+	border: none;
+}
+
+.wiki img {
+	max-width: 98%;
+}
+
+.wiki table img {
+	max-width: 91%;
+}
+
+div.wiki ul.toc {
+	display: block;
+	margin: 0;
+	padding: 10px 10px 10px 0;
+	width: 160px;
+	background: #ffffff;
+	border: none;
+	float: left;
+}
+
+div.wiki ul.toc.right {
+	margin: 0;
+	padding: 10px;
+	width: 160px;
+}
+
+
+
+
+
+
+
+
+/* icons */
 
 .icon {
 	padding: 0 0 0 10px;
+}
+
+[class^="icon-"], [class*=" icon-"], .open .icon-folder {
+	background: none;
 }
 
 [class^="icon-"]::before, [class*=" icon-"]::before {
@@ -216,72 +223,56 @@ h2, .wiki h1 {
 	text-decoration: none;
 }
 
-.icon-edit {
-	background: none;
-}
+.icon-add:before { content: "\f055"; }
+.icon-edit:before { content: "\f044"; }
+.icon-copy:before {}
+.icon-duplicate:before {}
+.icon-del:before { content: "\f014"; }
+.icon-move:before { content: "\f0ad"; }
+.icon-save:before {}
+.icon-cancel:before {}
+.icon-multiple:before {}
+.icon-folder:before { content: "\f07b"; }
+.open .icon-folder:before { content: "\f07c"; }
+.icon-package:before {}
+.icon-user:before {}
+.icon-projects:before {}
+.icon-help:before {}
+.icon-attachment:before {}
+.icon-history:before { content: "\f0e2"; }
+.icon-time:before {}
+.icon-time-add:before {}
+.icon-stats:before { content: "\f080"; }
+.icon-warning:before {}
+.icon-fav:before { content: "\f005"; }
+.icon-fav-off:before { content: "\f006"; }
+.icon-reload:before {}
+.icon-lock:before {}
+.icon-unlock:before {}
+.icon-checked:before {}
+.icon-details:before {}
+.icon-report:before {}
+.icon-comment:before {}
+.icon-summary:before {}
+.icon-server-authentication:before {}
+.icon-issue:before {}
+.icon-zoom-in:before {}
+.icon-zoom-out:before {}
 
-.icon-edit:before {
-	content: "\f044";
-}
-
-.icon-fav-off {
-	background: none;
-}
-
-.icon-fav-off:before {
-	content: "\f006";
-}
-
-.icon-fav-on {
-	background: none;
-}
-
-.icon-fav {
-	background:none;
-}
-
-.icon-fav:before {
-	content: "\f005";
-}
-
-.icon-lock {
-	background: none;
-}
-
-.icon-unlock {
-	background: none;
-}
-
-.icon-move {
-	background: none;
-}
-
-.icon-move:before {
-	content: "\f0ad";
-}
-
-.icon-del {
-	background: none;
-}
-
-.icon-del:before {
-	content: "\f014";
-}
-
-.icon-history {
-	background: none;
-}
-
-.icon-history:before {
-	content: "\f0e2";
-}
-
-/* wiki */
-
-.wiki h2 {
-	padding: 0;
-	background: #ffffff;
-}
+.icon-file:before {}
+.icon-file.text-plain:before {}
+.icon-file.text-x-c:before {}
+.icon-file.text-x-csharp:before {}
+.icon-file.text-x-php:before {}
+.icon-file.text-x-ruby:before {}
+.icon-file.text-xml:before {}
+.icon-file.image-gif:before {}
+.icon-file.image-jpeg:before {}
+.icon-file.image-png:before {}
+.icon-file.image-tiff:before {}
+.icon-file.application-pdf:before {}
+.icon-file.application-zip:before {}
+.icon-file.application-x-gzip:before {}
 
 
 
