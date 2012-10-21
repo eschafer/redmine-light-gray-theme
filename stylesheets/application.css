@@ -1,3 +1,4 @@
+@import url(normalize.css);
 @import url(../../../stylesheets/application.css);
 @import url(../fonts/open-sans.css);
 @import url(font-awesome.css);
@@ -10,6 +11,10 @@ body {
 
 a, a:link, a:visited {
 	color: #00758b;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 h1, h2, h3, h4 {
@@ -35,7 +40,6 @@ h1, h2, h3, h4 {
 
 #top-menu a:hover {
 	color: #ffffff;
-	text-decoration: none;
 }
 
 /* header */
@@ -82,6 +86,10 @@ h1 {
 	padding: 0;
 	background: none;
 	border: none;
+}
+
+.box h3 {
+	margin: 10px 0 0 0;
 }
 
 /* main menu */
@@ -148,8 +156,8 @@ h2, .wiki h1 {
 
 /* split content left */
 
-.splitcontentleft {
-	
+.splitcontentleft, .splitcontentright {
+	width: 48%;
 }
 
 /* activity */
@@ -169,12 +177,14 @@ p.breadcrumb {
 
 .wiki h2 {
 	padding: 10px 0 3px 0;
-	background: #ffffff;
+	background: none;
+	font-size: 18px;
 }
 
 .wiki h3 {
 	padding: 0;
 	border: none;
+	font-size: 14px;
 }
 
 .wiki img {
@@ -187,8 +197,8 @@ p.breadcrumb {
 
 div.wiki ul.toc {
 	display: block;
-	margin: 0;
-	padding: 10px 10px 10px 0;
+	margin: 0 30px 10px 0;
+	padding: 10px 30px 10px 0;
 	width: 160px;
 	background: #ffffff;
 	border: none;
@@ -197,8 +207,18 @@ div.wiki ul.toc {
 
 div.wiki ul.toc.right {
 	margin: 0;
-	padding: 10px;
+	padding: 10px 10px 10px 50px;
 	width: 160px;
+	border: none;
+}
+
+div.wiki ul.toc li li {
+	margin: 0 0 0 12px;
+}
+
+div.wiki ul.toc a {
+	font-size: 12px;
+	line-height: 17px;
 }
 
 
@@ -285,6 +305,25 @@ div.wiki ul.toc.right {
 ul.projects div.root a.project {
 	font-family: "OpenSansRegular";
 }
+
+
+
+
+
+
+/* CodeRay */
+
+/*div.wiki pre {
+	background-color: #272822;
+}
+div.wiki pre {
+	color: #F8F8F2;
+}
+.syntaxhl .no {
+	background: none !important;
+}*/
+
+
 
 
 
