@@ -61,14 +61,14 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-	font-family: "OpenSansLight";
+	font-family: "OpenSansRegular";
 	font-size: 24px;
 	font-weight: normal;
-	color: #666666;
+	color: #343537;
 	text-shadow: #ffffff 0px 1px 0px;
 }
 
-/* main*/
+/* main */
 
 #main {
 	background: #ffffff;
@@ -77,7 +77,9 @@ h1 {
 /* content */
 
 #content {
+	margin: 0 30px;
 	padding: 0;
+	width: 73%;
 }
 
 /* right */
@@ -137,15 +139,10 @@ h2, .wiki h1 {
 	background: #f8f8f8;
 	border-bottom: 1px solid #dfdfdf;
 
+	font-family: "OpenSansLight";
 	font-weight: normal;
 	color: #666666;
-	text-shadow: #ffffff 0px 1px 0px;
 	font-size: 24px;
-}
-
-#content {
-	margin: 0 0 0 30px;
-	width: 73%;
 }
 
 /* contextual */
@@ -217,12 +214,123 @@ div.wiki ul.toc li li {
 }
 
 div.wiki ul.toc a {
-	font-size: 12px;
+	color: #00758B;
 	line-height: 17px;
 }
 
+div.wiki ul.toc li a {
+	font-size: 12px;
+}
 
+div.wiki ul.toc li li a {
+	font-size: 11px;
+}
 
+div.wiki ul.toc li li li a {
+	font-size: 10px;
+}
+
+div.wiki .external {
+	padding: 0;
+	background: none;
+}
+
+div.wiki .external:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+
+	margin: 0 3px 0 0;
+	content: "\f08e";
+}
+
+/* projects */
+
+.my-project {
+	padding: 0;
+	background: 0;
+}
+
+/* calendar */
+
+.cal td span {
+	display: block;
+}
+
+/* roadmap */
+
+h3.version {
+	padding: 0;
+	background: none;
+}
+
+/* I don't like the briefcase in the roadmap
+h3.version:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+
+	color: #00758B;
+	margin: 0 3px 0 0;
+	content: "\f0b1";
+}*/
+
+/* activity */
+
+div#activity dt, #search-results dt {
+	padding: 0;
+	background: none;
+}
+
+div#activity dt span, div#activity dt a, #search-results dt #search-results dt span, #search-results dt a {
+	font-family: OpenSansRegular;
+}
+
+div#activity dd, #search-results dd {
+	padding: 0 0 0 33px;
+}
+
+#activity .news a:before, #activity .issue-note a:before, #activity .changeset a:before, #activity .issue-edit a:before, #activity .wiki-page a:before, #activity .issue a:before, #activity .issue-closed a:before {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+
+	margin: 0 3px 0 10px;
+}
+
+#activity .news a:before {
+	content: "\f0a1";
+}
+
+#activity .issue-note a:before {
+	content: "\f0e5";
+}
+
+#activity .changeset a:before {
+	content: "\f013";
+}
+
+#activity .issue-edit a:before {
+	content: "\f044";
+}
+
+#activity .wiki-page a:before {
+	content: "\f040";
+}
+
+#activity .issue a:before {
+	content: "\f096";
+}
+
+#activity .issue-closed a:before {
+	content: "\f046";
+}
 
 
 
@@ -254,7 +362,7 @@ div.wiki ul.toc a {
 .icon-multiple:before {}
 .icon-folder:before { content: "\f07b"; }
 .open .icon-folder:before { content: "\f07c"; }
-.icon-package:before {}
+.icon-package:before { content: "\f0b1"; }
 .icon-user:before {}
 .icon-projects:before {}
 .icon-help:before {}
@@ -266,10 +374,10 @@ div.wiki ul.toc a {
 .icon-warning:before {}
 .icon-fav:before { content: "\f005"; }
 .icon-fav-off:before { content: "\f006"; }
-.icon-reload:before {}
+.icon-reload:before { content: "\f0e2"; }
 .icon-lock:before {}
 .icon-unlock:before {}
-.icon-checked:before {}
+.icon-checked:before { content: "\f00c"; }
 .icon-details:before {}
 .icon-report:before {}
 .icon-comment:before {}
