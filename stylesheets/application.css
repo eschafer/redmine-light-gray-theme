@@ -1,270 +1,218 @@
-@import url(normalize.css);
 @import url(../../../stylesheets/application.css);
 @import url(../fonts/open-sans.css);
 @import url(font-awesome.css);
-
 /* global */
-
 body {
-	font-family: "OpenSansRegular";
-}
+  font-family: "OpenSansRegular"; }
 
 a, a:link, a:visited {
-	color: #00758b;
-}
+  color: #00758b; }
 
 a:hover {
-	text-decoration: none;
-}
+  text-decoration: none; }
 
 h1, h2, h3, h4 {
-	font-family: "OpenSansLight";
-}
+  font-family: "OpenSansLight"; }
 
 /* top menu */
-
 #top-menu {
-	background: #343537; /* checked */
-	height: 15px;
-	padding: 7px 27px 7px 30px;
-}
+  background: #343537;
+  /* checked */
+  height: 15px;
+  padding: 7px 27px 7px 30px; }
 
 #top-menu a {
-	margin: 0 10px 0 0;
-}
+  margin: 0 10px 0 0; }
 
 #top-menu a, #top-menu #loggedas {
-	font-weight: normal;
-	color: #E0E0E0; /* checked */
-}
+  font-weight: normal;
+  color: #E0E0E0;
+  /* checked */ }
 
 #top-menu a:hover {
-	color: #ffffff;
-}
+  color: #ffffff; }
 
 /* header */
-
 #header {
-	background: #E0E0E0; /* checked */
-	border-bottom: 1px solid #c6c6c6;
-	padding: 10px 30px 5px 30px;
-}
+  background: #E0E0E0;
+  /* checked */
+  border-bottom: 1px solid #c6c6c6;
+  padding: 10px 30px 5px 30px; }
 
 #quick-search, #quick-search a {
-	color: #666666;
-	text-shadow: #ffffff 0px 1px 0px;
-	text-decoration: none;
-}
+  color: #666666;
+  text-shadow: #ffffff 0px 1px 0px;
+  text-decoration: none; }
 
 #quick-search a:hover {
-	color: #D46E08; /* checked */
-}
+  color: #D46E08;
+  /* checked */ }
 
 h1 {
-	font-family: "OpenSansRegular";
-	font-size: 24px;
-	font-weight: normal;
-	color: #343537;
-	text-shadow: #ffffff 0px 1px 0px;
-}
+  font-family: "OpenSansRegular";
+  font-size: 24px;
+  font-weight: normal;
+  color: #343537;
+  text-shadow: #ffffff 0px 1px 0px; }
 
 /* main */
-
 #main {
-	background: #ffffff;
-}
+  background: #ffffff; }
 
 /* content */
-
 #content {
-	margin: 0 30px;
-	padding: 0;
-	width: 73%;
-}
+  margin: 0 30px;
+  padding: 0;
+  width: 73%; }
 
 /* right */
-
 .box {
-	padding: 0;
-	background: none;
-	border: none;
-}
+  padding: 0;
+  background: none;
+  border: none; }
 
 .box h3 {
-	margin: 10px 0 0 0;
-}
+  margin: 10px 0 0 0; }
 
 /* main menu */
-
 #main-menu {
-	left: 20px;
-}
+  left: 20px; }
 
 #main-menu li {
-	margin: 0px 0px -1px 0px;
-}
+  margin: 0px 0px -1px 0px; }
 
 #main-menu li a {
-	font-family: "OpenSansRegular";
-	font-weight: normal;
-	font-size: 13px;
-	color: #666666;
-	text-shadow: #ffffff 0px 1px 0px;
-}
+  font-family: "OpenSansRegular";
+  font-weight: normal;
+  font-size: 13px;
+  color: #666666;
+  text-shadow: #ffffff 0px 1px 0px; }
 
 #main-menu li a:hover {
-	background: #E0E0E0;
-	color: #D46E08; /* checked */
-}
+  background: #E0E0E0;
+  color: #D46E08;
+  /* checked */ }
 
 #main-menu li a.selected, #main-menu li a.selected:hover {
-	background: #f8f8f8;
-	border: 1px solid #C6C6C6;
-	border-bottom: none;
-
-	-webkit-border-top-left-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
-	-webkit-border-top-right-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
-	        border-top-left-radius: 3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-	        border-top-right-radius: 3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-
-	/* useful if you don't want a bg color from leaking outside the border: */
-	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
+  background: #f8f8f8;
+  border: 1px solid #C6C6C6;
+  border-bottom: none;
+  -webkit-border-top-left-radius: 3px;
+  /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+  -webkit-border-top-right-radius: 3px;
+  /* Safari 3-4, iOS 1-3.2, Android ≤1.6 */
+  border-top-left-radius: 3px;
+  /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+  border-top-right-radius: 3px;
+  /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 /* content header */
-
 h2, .wiki h1 {
-	margin: 0 0 0 -30px;
-	padding: 10px 0px 10px 30px;
-	background: #f8f8f8;
-	border-bottom: 1px solid #dfdfdf;
-
-	font-family: "OpenSansLight";
-	font-weight: normal;
-	color: #666666;
-	font-size: 24px;
-}
+  margin: 0 0 0 -30px;
+  padding: 10px 0px 10px 30px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #dfdfdf;
+  font-family: "OpenSansLight";
+  font-weight: normal;
+  color: #666666;
+  font-size: 24px; }
 
 /* contextual */
-
 .contextual {
-	padding: 15px 10px 0 0;
-}
+  padding: 15px 10px 0 0; }
 
 /* split content left */
-
 .splitcontentleft, .splitcontentright {
-	width: 48%;
-}
+  width: 48%; }
 
 /* activity */
-
 p.subtitle {
-	margin: 0px 0 10px 0;
-	font-style: normal;
-}
+  margin: 0px 0 10px 0;
+  font-style: normal; }
 
 /* wiki */
-
 p.breadcrumb {
-	margin: 0 0 0 -30px;
-	padding: 5px 0px 0px 30px;
-	background: #f8f8f8;
-}
+  margin: 0 0 0 -30px;
+  padding: 5px 0px 0px 30px;
+  background: #f8f8f8; }
 
 .wiki h2 {
-	padding: 10px 0 3px 0;
-	background: none;
-	font-size: 18px;
-}
+  padding: 10px 0 3px 0;
+  background: none;
+  font-size: 18px; }
 
 .wiki h3 {
-	padding: 0;
-	border: none;
-	font-size: 14px;
-}
+  padding: 0;
+  border: none;
+  font-size: 14px; }
 
 .wiki img {
-	max-width: 98%;
-}
+  max-width: 98%; }
 
 .wiki table img {
-	max-width: 91%;
-}
+  max-width: 91%; }
 
 div.wiki ul.toc {
-	display: block;
-	margin: 0 30px 10px 0;
-	padding: 10px 30px 10px 0;
-	width: 160px;
-	background: #ffffff;
-	border: none;
-	float: left;
-}
+  display: block;
+  margin: 0 30px 10px 0;
+  padding: 10px 30px 10px 0;
+  width: 160px;
+  background: #ffffff;
+  border: none;
+  float: left; }
 
 div.wiki ul.toc.right {
-	margin: 0;
-	padding: 10px 10px 10px 50px;
-	width: 160px;
-	border: none;
-}
+  margin: 0;
+  padding: 10px 10px 10px 50px;
+  width: 160px;
+  border: none; }
 
 div.wiki ul.toc li li {
-	margin: 0 0 0 12px;
-}
+  margin: 0 0 0 12px; }
 
 div.wiki ul.toc a {
-	color: #00758B;
-	line-height: 17px;
-}
+  color: #00758B;
+  line-height: 17px; }
 
 div.wiki ul.toc li a {
-	font-size: 12px;
-}
+  font-size: 12px; }
 
 div.wiki ul.toc li li a {
-	font-size: 11px;
-}
+  font-size: 11px; }
 
 div.wiki ul.toc li li li a {
-	font-size: 10px;
-}
+  font-size: 10px; }
 
 div.wiki .external {
-	padding: 0;
-	background: none;
-}
+  padding: 0;
+  background: none; }
 
 div.wiki .external:before {
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	display: inline-block;
-	text-decoration: inherit;
-
-	margin: 0 3px 0 0;
-	content: "\f08e";
-}
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  margin: 0 3px 0 0;
+  content: "\f08e"; }
 
 /* projects */
-
 .my-project {
-	padding: 0;
-	background: 0;
-}
+  padding: 0;
+  background: 0; }
 
 /* calendar */
-
 .cal td span {
-	display: block;
-}
+  display: block; }
 
 /* roadmap */
-
 h3.version {
-	padding: 0;
-	background: none;
-}
+  padding: 0;
+  background: none; }
 
 /* I don't like the briefcase in the roadmap
 h3.version:before {
@@ -278,149 +226,100 @@ h3.version:before {
 	margin: 0 3px 0 0;
 	content: "\f0b1";
 }*/
-
 /* activity */
-
 div#activity dt, #search-results dt {
-	padding: 0;
-	background: none;
-}
+  padding: 0;
+  background: none; }
 
 div#activity dt span, div#activity dt a, #search-results dt #search-results dt span, #search-results dt a {
-	font-family: OpenSansRegular;
-}
+  font-family: OpenSansRegular; }
 
 div#activity dd, #search-results dd {
-	padding: 0 0 0 33px;
-}
+  padding: 0 0 0 33px; }
 
 #activity .news a:before, #activity .issue-note a:before, #activity .changeset a:before, #activity .issue-edit a:before, #activity .wiki-page a:before, #activity .issue a:before, #activity .issue-closed a:before {
-	font-family: FontAwesome;
-	font-weight: normal;
-	font-style: normal;
-	display: inline-block;
-	text-decoration: inherit;
-
-	margin: 0 3px 0 10px;
-}
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  margin: 0 3px 0 10px; }
 
 #activity .news a:before {
-	content: "\f0a1";
-}
+  content: "\f0a1"; }
 
 #activity .issue-note a:before {
-	content: "\f0e5";
-}
+  content: "\f0e5"; }
 
 #activity .changeset a:before {
-	content: "\f013";
-}
+  content: "\f013"; }
 
 #activity .issue-edit a:before {
-	content: "\f044";
-}
+  content: "\f044"; }
 
 #activity .wiki-page a:before {
-	content: "\f040";
-}
+  content: "\f040"; }
 
 #activity .issue a:before {
-	content: "\f096";
-}
+  content: "\f096"; }
 
 #activity .issue-closed a:before {
-	content: "\f046";
-}
-
-
-
-
+  content: "\f046"; }
 
 /* icons */
-
 .icon {
-	padding: 0 0 0 10px;
-}
+  padding: 0 0 0 10px; }
 
 [class^="icon-"], [class*=" icon-"], .open .icon-folder {
-	background: none;
-}
+  background: none; }
 
 [class^="icon-"]::before, [class*=" icon-"]::before {
-	margin: 0 3px 0 0;
-	text-decoration: none;
-}
+  margin: 0 3px 0 0;
+  text-decoration: none; }
 
-.icon-add:before { content: "\f055"; }
-.icon-edit:before { content: "\f044"; }
-.icon-copy:before {}
-.icon-duplicate:before {}
-.icon-del:before { content: "\f014"; }
-.icon-move:before { content: "\f0ad"; }
-.icon-save:before {}
-.icon-cancel:before {}
-.icon-multiple:before {}
-.icon-folder:before { content: "\f07b"; }
-.open .icon-folder:before { content: "\f07c"; }
-.icon-package:before { content: "\f0b1"; }
-.icon-user:before {}
-.icon-projects:before {}
-.icon-help:before {}
-.icon-attachment:before {}
-.icon-history:before { content: "\f0e2"; }
-.icon-time:before {}
-.icon-time-add:before {}
-.icon-stats:before { content: "\f080"; }
-.icon-warning:before {}
-.icon-fav:before { content: "\f005"; }
-.icon-fav-off:before { content: "\f006"; }
-.icon-reload:before { content: "\f0e2"; }
-.icon-lock:before {}
-.icon-unlock:before {}
-.icon-checked:before { content: "\f00c"; }
-.icon-details:before {}
-.icon-report:before {}
-.icon-comment:before {}
-.icon-summary:before {}
-.icon-server-authentication:before {}
-.icon-issue:before {}
-.icon-zoom-in:before {}
-.icon-zoom-out:before {}
+.icon-add:before {
+  content: "\f055"; }
 
-.icon-file:before {}
-.icon-file.text-plain:before {}
-.icon-file.text-x-c:before {}
-.icon-file.text-x-csharp:before {}
-.icon-file.text-x-php:before {}
-.icon-file.text-x-ruby:before {}
-.icon-file.text-xml:before {}
-.icon-file.image-gif:before {}
-.icon-file.image-jpeg:before {}
-.icon-file.image-png:before {}
-.icon-file.image-tiff:before {}
-.icon-file.application-pdf:before {}
-.icon-file.application-zip:before {}
-.icon-file.application-x-gzip:before {}
+.icon-edit:before {
+  content: "\f044"; }
 
+.icon-del:before {
+  content: "\f014"; }
 
+.icon-move:before {
+  content: "\f0ad"; }
 
+.icon-folder:before {
+  content: "\f07b"; }
 
+.open .icon-folder:before {
+  content: "\f07c"; }
 
+.icon-package:before {
+  content: "\f0b1"; }
 
+.icon-history:before {
+  content: "\f0e2"; }
 
+.icon-stats:before {
+  content: "\f080"; }
 
+.icon-fav:before {
+  content: "\f005"; }
+
+.icon-fav-off:before {
+  content: "\f006"; }
+
+.icon-reload:before {
+  content: "\f0e2"; }
+
+.icon-checked:before {
+  content: "\f00c"; }
 
 ul.projects div.root a.project {
-	font-family: "OpenSansRegular";
-}
-
-
-
-
-
+  font-family: "OpenSansRegular"; }
 
 /* CodeRay */
-
 /*div.wiki pre {
 	background-color: #272822;
 }
@@ -430,39 +329,6 @@ div.wiki pre {
 .syntaxhl .no {
 	background: none !important;
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*@import url(../../basecamp/stylesheets/application.css);
 
 
@@ -472,10 +338,6 @@ h1, h2, h3, h4 { font-family: helvetica, arial, sans-serif; }
 textarea.wiki-edit { font-family: helvetica, arial, sans-serif; }
 .contextual { font-family: helvetica, arial, sans-serif; }
 ul.projects div.root a.project { font-family: helvetica, arial, sans-serif; }*/
-
-
-
-
 /*#wrapper {
 	background: white;
 }
