@@ -1,5 +1,9 @@
-@import url(normalize.css);
-@import url(../fonts/stylesheet.css);
+@import "normalize";
+@import "fonts";
+
+$dark-gray: #343537;
+$light-gray: #e0e0e0;
+$white: #ffffff;
 
 html {
 	font: {
@@ -8,27 +12,95 @@ html {
 	}
 }
 
-b, strong {
-	font-family: OpenSansBold;
-	font-weight: normal;
+a {
+	&:hover {
+	};
 }
 
-i, em {
-	font-family: OpenSansItalic;
-	font-weight: normal;
+h1, h2, h3, h4, h5, h6 {
+	font: {
+		family: OpenSansLight;
+		weight: normal;
+	}
 }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: BitstreamVeraSansMonoRoman;
-	font-size: 1em;
+	font: {
+		family: BitstreamVeraSansMonoRoman;
+	}
+}
+
+pre {
+	background: #272822;
+	color: #F8F8F2;
 }
 
 
+// Top Menu
 
 #top-menu {
+	background: $dark-gray;
+	color: $light-gray;
+	height: 1.8em;
+	font-size: 0.8em;
+	padding: 5px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+		margin: {
+			right: 10px;
+		}
+		list-style-type: none;
+	}
+
+	a {
+		color: $light-gray;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		};
+	}
+}
+
+#loggedas {
+	float: right;
+}
+
+#account {
+	float: right;
+	margin: {
+		right: -10px;
+		left: 10px;
+	}
+}
+
+
+// Header
+
+#header {
+	background: $light-gray;
+}
+
+
+// Main
+
+#main {
+
 }
 
 
@@ -48,10 +120,6 @@ samp {
 
 
 /************* CodeRay styles *************/
-pre {
-	background: #272822;
-	color: #F8F8F2;
-}
 //.syntaxhl div {display: inline;}
 //.syntaxhl .line-numbers {padding: 2px 4px 2px 4px; background-color: #eee; margin:0px 5px 0px 0px;}
 //.syntaxhl .code pre { overflow: auto }
@@ -91,7 +159,7 @@ pre {
 //.syntaxhl .doctype { color:#34b }
 //.syntaxhl .entity { color:#800; font-weight:bold }
 //.syntaxhl .error { color:#F00; background-color:#FAA }
-//.syntaxhl .escape  { color:#666 }
+//.syntaxhl .escape { color:#666 }
 //.syntaxhl .exception { color:#C00; font-weight:bold }
 .syntaxhl .float {
 	color: #AE81FF;
@@ -166,7 +234,7 @@ pre {
 }
 //.syntaxhl .type { color:#339; font-weight:bold }
 //.syntaxhl .value { color: #088; }
-//.syntaxhl .variable  { color:#037 }
+//.syntaxhl .variable { color:#037 }
 
 //.syntaxhl .insert { background: hsla(120,100%,50%,0.12) }
 //.syntaxhl .delete { background: hsla(0,100%,50%,0.12) }
