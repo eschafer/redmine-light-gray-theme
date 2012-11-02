@@ -312,30 +312,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@font-face {
-  font-family: 'OpenSansLight';
-  src: url("../fonts/OpenSans-Light-webfont.eot");
-  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'OpenSansRegular';
-  src: url("../fonts/OpenSans-Regular-webfont.eot");
-  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'BitstreamVeraSansMonoRoman';
-  src: url("../fonts/VeraMono-webfont.eot");
-  src: url("../fonts/VeraMono-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VeraMono-webfont.woff") format("woff"), url("../fonts/VeraMono-webfont.ttf") format("truetype"), url("../fonts/VeraMono-webfont.svg#BitstreamVeraSansMonoRoman") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
 html {
-  font-family: OpenSansRegular;
-  font-size: 12px; }
+  font-family: OpenSansRegular; }
+
+body {
+  font-size: 12px;
+  min-width: 900px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: OpenSansLight;
@@ -368,6 +350,27 @@ samp {
 pre {
   background: #272822;
   color: #F8F8F2; }
+
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url("../fonts/OpenSans-Light-webfont.eot");
+  src: url("../fonts/OpenSans-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light-webfont.woff") format("woff"), url("../fonts/OpenSans-Light-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Light-webfont.svg#OpenSansLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url("../fonts/OpenSans-Regular-webfont.eot");
+  src: url("../fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular-webfont.woff") format("woff"), url("../fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("../fonts/OpenSans-Regular-webfont.svg#OpenSansRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'BitstreamVeraSansMonoRoman';
+  src: url("../fonts/VeraMono-webfont.eot");
+  src: url("../fonts/VeraMono-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/VeraMono-webfont.woff") format("woff"), url("../fonts/VeraMono-webfont.ttf") format("truetype"), url("../fonts/VeraMono-webfont.svg#BitstreamVeraSansMonoRoman") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 
 #top-menu {
   background: #343537;

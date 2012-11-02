@@ -36,14 +36,14 @@ _gaq.push(['_trackPageview']);
 
 	redmine.fixMultipleValueCustomFields = function() {
 
-		// Operating system.
-		this.fixMultipleValueCustomField("issue_custom_field_values_1");
+		//  1: Operating system
+		//  7: Browser
+		// 12: Mobile device
+		var customFieldIndices = [1, 7, 12];
 
-		// Browser.
-		this.fixMultipleValueCustomField("issue_custom_field_values_7");
-
-		// Mobile device.
-		this.fixMultipleValueCustomField("issue_custom_field_values_12");
+		for (var i = 0; i < customFieldIndices.length; i++) {
+			this.fixMultipleValueCustomField("issue_custom_field_values_" + customFieldIndices[i]);
+		}
 	};
 
 	redmine.fixMultipleValueCustomField = function(id) {
@@ -60,7 +60,7 @@ _gaq.push(['_trackPageview']);
 		// Turn of multiple selection, and add an empty option.
 		$select.removeAttr("multiple").prepend("<option value=\"\"></option>");
 
-		// If no options have been selected, then the empty option will be.
+		// If no options have been selected, then select the empty option.
 		if (!selected) {
 			$select.val("");
 		}
