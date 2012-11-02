@@ -18,9 +18,6 @@ _gaq.push(['_trackPageview']);
 	redmine.init = function() {
 
 		// I don't like how multiple value fields look, but can't uncheck that box.
-		// TODO: If you're updating the issue, and change the project, tracker,
-		// or status, the custom fields reload with the original display. I could
-		// also just modify the database to fix the issue...
 		this.fixMultipleValueCustomFields();
 
 		// Override
