@@ -1,4 +1,68 @@
-#top-menu {
+body {
+	font-size: 12px;
+	line-height: 1.5em;
+
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-image: -webkit-repeating-linear-gradient(white 0px, white 16px, #A6FFED 17px, white 18px);
+	background-size: auto 18px;
+	background-repeat: repeat;
+	background-position: 0px 0px;
+}
+
+h1 {
+	font-size: 2em; /* 24px */
+	line-height: 1.5em; /* 36px */
+	margin: 0.75em 0;
+}
+
+h2 {
+	font-size: 1.8333em; /* 22px */
+	line-height: 1.6364em; /* 36px */
+	margin: 0.8182em 0;
+}
+
+h3 {
+	font-size: 1.6667em; /* 20px */
+	line-height: 1.8em; /* 36px */
+	margin: 0.9em 0;
+}
+
+h4 {
+	font-size: 1.5em; /* 18px */
+	line-height: 1em; /* 18px */
+	margin: 1em 0;
+}
+
+h5 {
+	font-size: 1.3333em; /* 16px */
+	line-height: 1.125em; /* 18px */
+	margin: 1.125em 0;
+}
+
+h6 {
+	font-size: 1.1667em; /* 14px */
+	line-height: 1.2857em; /* 18px */
+	margin: 1.2857em 0;
+}
+
+p, blockquote, pre,
+ul, ol, dl,
+hr, table, fieldset {
+	margin: 1.5em 0;
+	padding: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0;
+}
+
+#quick-search, #sidebar, img, table.progress {
+	display: none;
+}
+
+/*#top-menu {
 	background: $dark-gray;
 	color: $light-gray;
 	height: 1.8em;
@@ -49,7 +113,7 @@
 
 #sidebar {
 
-}
+}*/
 
 ///***** Layout *****/
 //#wrapper {background: white;}

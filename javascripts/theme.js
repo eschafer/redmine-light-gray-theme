@@ -2,12 +2,12 @@
 /*jshint eqeqeq: false*/
 /*jshint strict: false*/
 var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
-_gaq.push(['_trackPageview']);
+_gaq.push(["_setAccount", "UA-XXXXXXXX-X"]);
+_gaq.push(["_trackPageview"]);
 (function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+	ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+	var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
 })();
 
 (function() {
@@ -17,25 +17,44 @@ _gaq.push(['_trackPageview']);
 
 	redmine.init = function() {
 
-		// I don't like how multiple value fields look, but can't uncheck that box.
-		this.fixMultipleValueCustomFields();
+		this.updateMarkup();
 
 		// Override
 		// Fix multiple value custom fields if the issue form is updated.
 		window.updateIssueFrom = function(url) {
 			$.ajax({
 				url: url,
-				type: 'post',
-				data: $('#issue-form').serialize(),
+				type: "post",
+				data: $("#issue-form").serialize(),
 				success: function() {
-					redmine.fixMultipleValueCustomFields();
+					redmine.updateMarkup();
 				}
 			});
 		};
 	};
 
+	redmine.updateMarkup = function() {
+		this.fixMultipleValueCustomFields();
+		this.prepoulateIssueDescription();
+	};
+
+	redmine.prepoulateIssueDescription = function() {
+		var bugTemplate = "*URL*\n\n*Steps to reproduce*\n\n*Observed result*\n\n*Expected result*";
+		var $issueDescription = $("#issue_description");
+		if ($("#issue_tracker_id option").filter(":selected").text() === "Bug") {
+			if ($issueDescription.text() === "") {
+				$issueDescription.text(bugTemplate);
+			}
+		} else {
+			if ($issueDescription.text() === bugTemplate) {
+				$issueDescription.text("");
+			}
+		}
+	};
+
 	redmine.fixMultipleValueCustomFields = function() {
 
+		// I don't like how multiple value fields look, but can't uncheck that box.
 		//  1: Operating system
 		//  7: Browser
 		// 12: Mobile device
