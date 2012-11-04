@@ -1,0 +1,100 @@
+@import "screen";
+
+@import "partials/normalize-custom";
+@import "partials/fonts";
+
+@import "compass/typography";
+$base-font-size: 12px;
+$base-line-height: 18px;
+@include establish-baseline();
+
+#wrapper {
+	@include container;
+	@include showgrid;
+}
+
+h1 {
+	@include adjust-font-size-to(24px);
+}
+h2 {
+	@include adjust-font-size-to(22px);
+	line-height: 36px;
+}
+h3 {
+	@include adjust-font-size-to(20px);
+}
+h4 {
+	@include adjust-font-size-to(18px);
+}
+h5 {
+	@include adjust-font-size-to(16px);
+	line-height: 36px;
+}
+h6 {
+	@include adjust-font-size-to(14px);
+}
+p {margin: 1.5em 0;}
+
+
+
+
+$dark-gray: #343537;
+$light-gray: #e0e0e0;
+$white: #ffffff;
+
+* {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+#top-menu {
+	background: $dark-gray;
+	color: $light-gray;
+	@include adjust-font-size-to(10px);
+	height: 3.6em;
+	padding: 9px 0;
+
+	& > ul {
+		@include prepend(1);
+	}
+
+	li {
+		float: left;
+		margin: {
+			right: 10px;
+		}
+		list-style-type: none;
+	}
+
+	a {
+		color: $light-gray;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		};
+	}
+}
+
+#loggedas {
+	float: right;
+}
+
+#account {
+	float: right;
+	margin: {
+		right: -10px;
+		left: 10px;
+	}
+
+	& > ul {
+		@include append(1);
+	}
+}
+
+
+
+
+#quick-search, #sidebar, img {
+	display: none;
+}
