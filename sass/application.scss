@@ -1,7 +1,10 @@
 @import "screen";
-
 @import "partials/normalize-custom";
 @import "partials/fonts";
+
+//@import "blueprint/liquid";
+
+@import "compass/css3/box-sizing";
 
 @import "compass/typography";
 $base-font-size: 12px;
@@ -10,30 +13,39 @@ $base-line-height: 18px;
 
 #wrapper {
 	@include container;
-	@include showgrid;
+	width: 99%;
+	//@include showgrid;
 }
 
 h1 {
-	@include adjust-font-size-to(24px);
+	@include adjust-font-size-to(20px);
+	margin: (18/20 * 1em) 0 0 0;
 }
 h2 {
-	@include adjust-font-size-to(22px);
-	line-height: 36px;
-}
-h3 {
-	@include adjust-font-size-to(20px);
-}
-h4 {
-	@include adjust-font-size-to(18px);
-}
-h5 {
 	@include adjust-font-size-to(16px);
 	line-height: 36px;
+	margin: (18/16 * 1em) 0 0 0;
+}
+h3 {
+	@include adjust-font-size-to(13px);
+	margin: (18/13 * 1em) 0 0 0;
+}
+h4 {
+	@include adjust-font-size-to(12px);
+	margin: (18/12 * 1em) 0 0 0;
+}
+h5 {
+	@include adjust-font-size-to(12px);
+	margin: (18/12 * 1em) 0 0 0;
 }
 h6 {
-	@include adjust-font-size-to(14px);
+	@include adjust-font-size-to(12px);
+	margin: (18/12 * 1em) 0 0 0;
 }
-p {margin: 1.5em 0;}
+p {
+	@include leader();
+	@include trailer();
+}
 
 
 
@@ -43,11 +55,19 @@ $light-gray: #e0e0e0;
 $white: #ffffff;
 
 * {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+	@include box-sizing("border-box");
 }
 
+ul, ol {
+	margin: 0;
+	padding: 0 0 0 18px;
+}
+
+pre {
+	padding: 0 $base-line-height;
+}
+
+/* Top Menu */
 #top-menu {
 	background: $dark-gray;
 	color: $light-gray;
@@ -62,7 +82,7 @@ $white: #ffffff;
 	li {
 		float: left;
 		margin: {
-			right: 10px;
+			right: $blueprint-grid-margin;
 		}
 		list-style-type: none;
 	}
@@ -76,25 +96,92 @@ $white: #ffffff;
 	}
 }
 
+/* Top Menu - Logged As */
 #loggedas {
 	float: right;
 }
 
+/* Top Menu - Account */
 #account {
 	float: right;
 	margin: {
 		right: -10px;
-		left: 10px;
+		left: $blueprint-grid-margin;
 	}
 
 	& > ul {
+		padding: 0;
 		@include append(1);
 	}
 }
 
+/* Header */
+#header {
+	@include prepend(1);
+	@include append(1);
+}
+
+/* Header - Main Menu */
+#main-menu {
+	li {
+		float: left;
+		list-style-type: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+/* Main */
+#main {
+	@include prepend(1);
+	@include append(1);
+}
+
+/* Main - Sidebar */
+#sidebar {
+	@include column(6, true);
+	@include float-right;
+}
+
+/* Main - Content */
+#content {
+	@include column(14);
+	width: 70%;
+}
+
+/* Main - Content - Activity */
+#activity {
+	dt {
+		margin: 1.5em 0 0 0;
+		span {
+			@include column(2);
+		}
+	}
+	dd {
+		@include prepend(2);
+		.author {
+			display: block;
+		}
+	}
+}
+
+/* Footer */
+#footer {
+	display: none;
+}
+
+@import "partials/code-ray";
 
 
 
-#quick-search, #sidebar, img {
+
+
+
+
+
+
+#quick-search, .contextual img {
 	display: none;
 }
