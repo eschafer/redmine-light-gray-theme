@@ -980,6 +980,8 @@ pre {
   font-style: normal;
 }
 
+/* */
+/* Vertical Rhythm */
 /* line 61, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
   font-size: 75%;
@@ -991,23 +993,23 @@ html {
   line-height: 1.5em;
 }
 
-/* line 14, ../sass/application.scss */
+/* line 19, ../sass/application.scss */
 #wrapper {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  width: 99%;
+  width: 100%;
 }
 
-/* line 20, ../sass/application.scss */
+/* line 25, ../sass/application.scss */
 h1 {
   font-size: 1.66667em;
   line-height: 1.8em;
   margin: 0.9em 0 0 0;
 }
 
-/* line 24, ../sass/application.scss */
+/* line 29, ../sass/application.scss */
 h2 {
   font-size: 1.33333em;
   line-height: 2.25em;
@@ -1015,60 +1017,99 @@ h2 {
   margin: 1.125em 0 0 0;
 }
 
-/* line 29, ../sass/application.scss */
+/* line 34, ../sass/application.scss */
 h3 {
   font-size: 1.08333em;
   line-height: 1.38462em;
-  margin: 1.38462em 0 0 0;
+  margin: 1.38462em 0;
 }
 
-/* line 33, ../sass/application.scss */
+/* line 38, ../sass/application.scss */
 h4 {
   font-size: 1em;
   line-height: 1.5em;
-  margin: 1.5em 0 0 0;
+  margin: 1.5em 0;
 }
 
-/* line 37, ../sass/application.scss */
+/* line 42, ../sass/application.scss */
 h5 {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 1.5em 0 0 0;
+  font-size: 0.91667em;
+  line-height: 1.63636em;
+  margin: 1.63636em 0;
 }
 
-/* line 41, ../sass/application.scss */
+/* line 46, ../sass/application.scss */
 h6 {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin: 1.5em 0 0 0;
+  font-size: 0.83333em;
+  line-height: 1.8em;
+  margin: 1.8em 0;
 }
 
-/* line 45, ../sass/application.scss */
+/* line 51, ../sass/application.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: #00648B;
+}
+
+/* line 55, ../sass/application.scss */
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
+  display: inline;
+  color: #DDD;
+}
+
+/* line 60, ../sass/application.scss */
+a.wiki-anchor {
+  display: none;
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+/* line 66, ../sass/application.scss */
+a.wiki-anchor:hover {
+  color: #AAA !important;
+  text-decoration: none;
+}
+
+/* line 72, ../sass/application.scss */
 p {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 57, ../sass/application.scss */
+/* Apply a natural box layout model to all elements. */
+/* line 85, ../sass/application.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 61, ../sass/application.scss */
+/* line 89, ../sass/application.scss */
 ul, ol {
   margin: 0;
-  padding: 0 0 0 18px;
+  padding: 0;
 }
 
-/* line 66, ../sass/application.scss */
+/* line 94, ../sass/application.scss */
+ul ul, ul ol, ol ol, ol ul {
+  margin: 0 0 0 -30px;
+}
+
+/* line 98, ../sass/application.scss */
+li {
+  position: relative;
+  left: 18px;
+  margin: 0 18px 0 0;
+  padding: 0 0 0 30px;
+  text-indent: -30px;
+}
+
+/* line 106, ../sass/application.scss */
 pre {
   padding: 0 18px;
 }
 
 /* Top Menu */
-/* line 71, ../sass/application.scss */
+/* line 111, ../sass/application.scss */
 #top-menu {
   background: #343537;
   color: #e0e0e0;
@@ -1077,105 +1118,196 @@ pre {
   height: 3.6em;
   padding: 9px 0;
 }
-/* line 78, ../sass/application.scss */
+/* line 118, ../sass/application.scss */
 #top-menu > ul {
   padding-left: 40px;
 }
-/* line 82, ../sass/application.scss */
+/* line 122, ../sass/application.scss */
 #top-menu li {
   float: left;
   margin-right: 10px;
   list-style-type: none;
+  position: static;
+  padding: 0 10px 0 0;
+  text-indent: 0;
 }
-/* line 90, ../sass/application.scss */
+/* line 134, ../sass/application.scss */
 #top-menu a {
   color: #e0e0e0;
   text-decoration: none;
 }
-/* line 93, ../sass/application.scss */
+/* line 137, ../sass/application.scss */
 #top-menu a:hover {
   color: white;
 }
 
 /* Top Menu - Logged As */
-/* line 100, ../sass/application.scss */
+/* line 144, ../sass/application.scss */
 #loggedas {
   float: right;
 }
 
 /* Top Menu - Account */
-/* line 105, ../sass/application.scss */
+/* line 149, ../sass/application.scss */
 #account {
   float: right;
   margin-right: -10px;
-  margin-left: 10px;
+  margin-left: 18px;
 }
-/* line 112, ../sass/application.scss */
+/* line 156, ../sass/application.scss */
 #account > ul {
+  margin: 0 -10px 0 0;
   padding: 0;
   padding-right: 40px;
 }
 
 /* Header */
-/* line 119, ../sass/application.scss */
+/* line 164, ../sass/application.scss */
 #header {
   padding-left: 40px;
   padding-right: 40px;
+  background: #e0e0e0;
+  height: 72px;
+}
+/* line 170, ../sass/application.scss */
+#header h1 {
+  margin: 0;
+  padding: 0.375em 0 0 0;
+  font-family: OpenSansRegular;
+  color: #343537;
+  text-shadow: white 0px 1px 0px;
+  font-size: 2em;
+  line-height: 1.5em;
 }
 
 /* Header - Main Menu */
-/* line 126, ../sass/application.scss */
+/* line 181, ../sass/application.scss */
+#main-menu {
+  margin: 0.75em 0 0 0;
+}
+/* line 184, ../sass/application.scss */
+#main-menu ul {
+  padding: 0;
+}
+/* line 188, ../sass/application.scss */
 #main-menu li {
   float: left;
   list-style-type: none;
+  margin-right: 10px;
+  list-style-type: none;
+  position: static;
+  padding: 0 10px 0 0;
+  text-indent: 0;
 }
-/* line 131, ../sass/application.scss */
+/* line 202, ../sass/application.scss */
 #main-menu a {
   text-decoration: none;
 }
 
 /* Main */
-/* line 137, ../sass/application.scss */
+/* line 208, ../sass/application.scss */
 #main {
   padding-left: 40px;
   padding-right: 40px;
 }
 
 /* Main - Sidebar */
-/* line 143, ../sass/application.scss */
+/* line 214, ../sass/application.scss */
 #sidebar {
   display: inline;
-  float: left;
-  margin-right: 0;
-  width: 230px;
-  display: inline;
   float: right;
-}
-/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #sidebar {
-  overflow-x: hidden;
+  width: 23%;
 }
 
 /* Main - Content */
-/* line 149, ../sass/application.scss */
+/* line 221, ../sass/application.scss */
 #content {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 550px;
-  width: 70%;
+  width: 75%;
+  border-right: 1px solid #DDD;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content {
   overflow-x: hidden;
 }
+/* line 226, ../sass/application.scss */
+#content p span.my-project {
+  display: none;
+}
+/* line 230, ../sass/application.scss */
+#content .contextual {
+  float: right;
+}
+/* line 234, ../sass/application.scss */
+#content .breadcrumb {
+  margin: 0 0 0 -40px;
+  padding: 1.5em 0 0 40px;
+}
+/* line 240, ../sass/application.scss */
+#content .toc {
+  float: left;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 230px;
+  margin: 1.5em 0 0 0;
+  padding: 0;
+}
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content .toc {
+  overflow-x: hidden;
+}
+/* line 246, ../sass/application.scss */
+#content .toc, #content .toc ul, #content .toc ol {
+  list-style-type: none;
+}
+/* line 255, ../sass/application.scss */
+#content .toc:before {
+  content: "Contents";
+  font-size: 1.33333em;
+  line-height: 2.25em;
+  line-height: 36px;
+  margin: 1.125em 0 0 0;
+  color: #00648B;
+  font-family: OpenSansSemibold;
+}
+/* line 264, ../sass/application.scss */
+#content .attachments:before {
+  content: "Attachments";
+  font-size: 1.33333em;
+  line-height: 2.25em;
+  line-height: 36px;
+  margin: 1.125em 0 0 0;
+  color: #00648B;
+  font-family: OpenSansSemibold;
+}
+/* line 273, ../sass/application.scss */
+#content > h2, #content .wiki > h1 {
+  padding: 0.375em 0 0.375em 40px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #dfdfdf;
+  font-family: "OpenSansLight";
+  font-weight: normal;
+  color: #666666;
+  font-size: 24px;
+  margin: 0 0 0 -40px;
+}
+
+/* Main - Content - Projects Index */
+/* line 288, ../sass/application.scss */
+#projects-index .wiki.description {
+  display: none;
+}
 
 /* Main - Content - Activity */
-/* line 156, ../sass/application.scss */
+/* line 295, ../sass/application.scss */
 #activity dt {
   margin: 1.5em 0 0 0;
 }
-/* line 158, ../sass/application.scss */
+/* line 297, ../sass/application.scss */
 #activity dt span {
   display: inline;
   float: left;
@@ -1186,17 +1318,17 @@ pre {
 * html #activity dt span {
   overflow-x: hidden;
 }
-/* line 162, ../sass/application.scss */
+/* line 301, ../sass/application.scss */
 #activity dd {
   padding-left: 80px;
 }
-/* line 164, ../sass/application.scss */
+/* line 303, ../sass/application.scss */
 #activity dd .author {
   display: block;
 }
 
 /* Footer */
-/* line 171, ../sass/application.scss */
+/* line 310, ../sass/application.scss */
 #footer {
   display: none;
 }
@@ -1297,7 +1429,7 @@ pre {
   color: #F92672;
 }
 
-/* line 185, ../sass/application.scss */
+/* line 324, ../sass/application.scss */
 #quick-search, .contextual img {
   display: none;
 }

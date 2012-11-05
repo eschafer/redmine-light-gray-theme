@@ -2,18 +2,23 @@
 @import "partials/normalize-custom";
 @import "partials/fonts";
 
-//@import "blueprint/liquid";
-
+/* */
 @import "compass/css3/box-sizing";
+@import "compass/css3/text-shadow";
 
+/* Vertical Rhythm */
 @import "compass/typography";
 $base-font-size: 12px;
 $base-line-height: 18px;
 @include establish-baseline();
 
+$dark-gray: #343537;
+$light-gray: #e0e0e0;
+$white: #ffffff;
+
 #wrapper {
 	@include container;
-	width: 99%;
+	width: 100%;
 	//@include showgrid;
 }
 
@@ -28,20 +33,42 @@ h2 {
 }
 h3 {
 	@include adjust-font-size-to(13px);
-	margin: (18/13 * 1em) 0 0 0;
+	margin: (18/13 * 1em) 0;
 }
 h4 {
 	@include adjust-font-size-to(12px);
-	margin: (18/12 * 1em) 0 0 0;
+	margin: (18/12 * 1em) 0;
 }
 h5 {
-	@include adjust-font-size-to(12px);
-	margin: (18/12 * 1em) 0 0 0;
+	@include adjust-font-size-to(11px);
+	margin: (18/11 * 1em) 0;
 }
 h6 {
-	@include adjust-font-size-to(12px);
-	margin: (18/12 * 1em) 0 0 0;
+	@include adjust-font-size-to(10px);
+	margin: (18/10 * 1em) 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #00648B;
+}
+
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
+	display: inline;
+	color: #DDD;
+}
+
+a.wiki-anchor {
+	display: none;
+	margin-left: 6px;
+	text-decoration: none;
+}
+
+a.wiki-anchor:hover {
+	color: #AAA !important;
+	text-decoration: none;
+}
+
+
 p {
 	@include leader();
 	@include trailer();
@@ -54,13 +81,26 @@ $dark-gray: #343537;
 $light-gray: #e0e0e0;
 $white: #ffffff;
 
+/* Apply a natural box layout model to all elements. */
 * {
 	@include box-sizing("border-box");
 }
 
 ul, ol {
 	margin: 0;
-	padding: 0 0 0 18px;
+	padding: 0;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0 0 0 -30px;
+}
+
+li {
+	position: relative;
+	left: 18px;
+	margin: 0 18px 0 0;
+	padding: 0 0 0 30px;
+	text-indent: -30px;
 }
 
 pre {
@@ -85,6 +125,10 @@ pre {
 			right: $blueprint-grid-margin;
 		}
 		list-style-type: none;
+
+		position: static;
+		padding: 0 10px 0 0;
+		text-indent: 0;
 	}
 
 	a {
@@ -106,10 +150,11 @@ pre {
 	float: right;
 	margin: {
 		right: -10px;
-		left: $blueprint-grid-margin;
+		left: $base-line-height;
 	}
 
 	& > ul {
+		margin: 0 -10px 0 0;
 		padding: 0;
 		@include append(1);
 	}
@@ -119,13 +164,39 @@ pre {
 #header {
 	@include prepend(1);
 	@include append(1);
+	background: $light-gray;
+	height: 4*$base-line-height;
+
+	h1 {
+		margin: 0;
+		padding: 0.375em 0 0 0;
+		font-family: OpenSansRegular;
+		color: #343537;
+		@include text-shadow(#ffffff 0px 1px 0px);
+		@include adjust-font-size-to(24px);
+	}
 }
 
 /* Header - Main Menu */
 #main-menu {
+	//@include leader(1);
+	margin: 0.75em 0 0 0;
+	ul {
+		padding: 0;
+	}
+
 	li {
 		float: left;
 		list-style-type: none;
+
+		margin: {
+			right: $blueprint-grid-margin;
+		}
+		list-style-type: none;
+
+		position: static;
+		padding: 0 10px 0 0;
+		text-indent: 0;
 	}
 
 	a {
@@ -141,14 +212,82 @@ pre {
 
 /* Main - Sidebar */
 #sidebar {
-	@include column(6, true);
+	//@include column(6, true);
 	@include float-right;
+	width: 23%;
 }
 
 /* Main - Content */
 #content {
 	@include column(14);
-	width: 70%;
+	width: 75%;
+	border-right: 1px solid #DDD;
+
+	p span.my-project {
+		display: none;
+	}
+
+	.contextual {
+		float: right;
+	}
+
+	.breadcrumb {
+		margin: 0 0 0 -40px;
+		padding: 1.5em 0 0 40px;
+		//background: #f8f8f8;
+	}
+
+	.toc {
+		float: left;
+		@include column(6);
+		margin: 1.5em 0 0 0;
+		padding: 0;
+
+		&, ul, ol {
+			list-style-type: none;
+		}
+
+		&.right {
+			//float: right;
+		}
+	}
+
+	.toc:before {
+		content: "Contents";
+		@include adjust-font-size-to(16px);
+		line-height: 36px;
+		margin: (18/16 * 1em) 0 0 0;
+		color: #00648B;
+		font-family: OpenSansSemibold;
+	}
+
+	.attachments:before {
+		content: "Attachments";
+		@include adjust-font-size-to(16px);
+		line-height: 36px;
+		margin: (18/16 * 1em) 0 0 0;
+		color: #00648B;
+		font-family: OpenSansSemibold;
+	};
+
+	& > h2, .wiki > h1 {
+		padding: 0.375em 0 0.375em 40px;
+		background: #f8f8f8;
+		border-bottom: 1px solid #dfdfdf;
+
+		font-family: "OpenSansLight";
+		font-weight: normal;
+		color: #666666;
+		font-size: 24px;
+		margin: 0 0 0 -40px;
+	}
+}
+
+/* Main - Content - Projects Index */
+#projects-index {
+	.wiki.description {
+		display: none;
+	}
 }
 
 /* Main - Content - Activity */
