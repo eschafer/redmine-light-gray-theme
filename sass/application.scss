@@ -22,7 +22,7 @@ $white: #ffffff;
 #wrapper {
 	@include container;
 	width: 100%;
-	@include showgrid;
+	//@include showgrid;
 }
 
 a, a:link, a:visited {
@@ -30,32 +30,36 @@ a, a:link, a:visited {
 }
 
 h1 {
+	@include adjust-font-size-to(24px);
+	margin: (18/24 * 1em) 0 0 0;
+}
+h2, .wiki h1 {
 	@include adjust-font-size-to(20px);
 	margin: (18/20 * 1em) 0 0 0;
 }
-h2 {
+h3, .wiki h2 {
 	@include adjust-font-size-to(16px);
 	line-height: 36px;
 	margin: (18/16 * 1em) 0 0 0;
 }
-h3 {
+h4, .wiki h3 {
 	@include adjust-font-size-to(13px);
 	margin: (18/13 * 1em) 0;
 }
-h4 {
+h5, .wiki h4 {
 	@include adjust-font-size-to(12px);
 	margin: (18/12 * 1em) 0;
 }
-h5 {
+h6, .wiki h5 {
 	@include adjust-font-size-to(11px);
 	margin: (18/11 * 1em) 0;
 }
-h6 {
+.wiki h6 {
 	@include adjust-font-size-to(10px);
 	margin: (18/10 * 1em) 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .wiki h1, .wiki h2, .wiki h3, .wiki h4, .wiki h5, .wiki h6 {
 	color: #00648B;
 }
 
@@ -74,15 +78,6 @@ h1, h2, h3, h4, h5, h6 {
 		family: "OpenSansLight";
 		weight: normal;
 	}
-
-	/*padding: 0.375em 0 0.375em 40px;
-	background: #f8f8f8;
-
-	font-family: "OpenSansLight";
-	font-weight: normal;
-	color: #666666;
-	font-size: 24px;
-	margin: 0 0 0 -40px;*/
 }
 
 h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
@@ -113,26 +108,16 @@ p {
 }
 
 .box {
-	margin: 18px 18px 18px 0;
-
-	h3 {
-		margin-top: 0;
-	}
-
-	p, ul {
-		margin-bottom: 0;
-	}
-}
-
-.members.box {
-	font-family: OpenSansSemibold;
-
-	h3 {
-
+	&.members {
+		font-family: OpenSansSemibold;
 	}
 
 	a {
 		font-family: OpenSansRegular;
+	}
+
+	p {
+		margin-top: 0;
 	}
 }
 
