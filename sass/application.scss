@@ -59,6 +59,32 @@ h1, h2, h3, h4, h5, h6 {
 	color: #00648B;
 }
 
+// This is for the current page header.
+#content > h2, #content > .wiki > h1 {
+	@include adjust-font-size-to(24px);
+	
+	// Push the margin back to the edge in order to color the background.
+	margin: 0 0 0 -40px;
+	padding: $base-line-height/2 0 $base-line-height/2 40px;
+	
+	background: #f8f8f8;
+	color: #666666;
+	font: {
+		size: 24px;
+		family: "OpenSansLight";
+		weight: normal;
+	}
+
+	/*padding: 0.375em 0 0.375em 40px;
+	background: #f8f8f8;
+
+	font-family: "OpenSansLight";
+	font-weight: normal;
+	color: #666666;
+	font-size: 24px;
+	margin: 0 0 0 -40px;*/
+}
+
 h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
 	display: inline;
 	color: #DDD;
@@ -342,18 +368,6 @@ pre {
 		color: #00648B;
 		font-family: OpenSansSemibold;
 	};
-
-	// This is for the current page header.
-	& > h2, & > .wiki > h1 {
-		padding: 0.375em 0 0.375em 40px;
-		background: #f8f8f8;
-
-		font-family: "OpenSansLight";
-		font-weight: normal;
-		color: #666666;
-		font-size: 24px;
-		margin: 0 0 0 -40px;
-	}
 
 	.nosidebar & {
 		width: 100%;

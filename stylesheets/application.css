@@ -1139,80 +1139,101 @@ h1, h2, h3, h4, h5, h6 {
   color: #00648B;
 }
 
-/* line 62, ../sass/application.scss */
+/* line 63, ../sass/application.scss */
+#content > h2, #content > .wiki > h1 {
+  font-size: 2em;
+  line-height: 1.5em;
+  margin: 0 0 0 -40px;
+  padding: 9px 0 9px 40px;
+  background: #f8f8f8;
+  color: #666666;
+  font-size: 24px;
+  font-family: "OpenSansLight";
+  font-weight: normal;
+  	/*padding: 0.375em 0 0.375em 40px;
+  	background: #f8f8f8;
+  
+  	font-family: "OpenSansLight";
+  	font-weight: normal;
+  	color: #666666;
+  	font-size: 24px;
+  	margin: 0 0 0 -40px;*/
+}
+
+/* line 88, ../sass/application.scss */
 h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
   display: inline;
   color: #DDD;
 }
 
-/* line 67, ../sass/application.scss */
+/* line 93, ../sass/application.scss */
 a.wiki-anchor {
   display: none;
   margin-left: 6px;
   text-decoration: none;
 }
 
-/* line 73, ../sass/application.scss */
+/* line 99, ../sass/application.scss */
 a.wiki-anchor:hover {
   color: #AAA !important;
   text-decoration: none;
 }
 
-/* line 78, ../sass/application.scss */
+/* line 104, ../sass/application.scss */
 b, strong {
   font-weight: normal;
   font-family: OpenSansSemibold;
 }
 
-/* line 84, ../sass/application.scss */
+/* line 110, ../sass/application.scss */
 p {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 89, ../sass/application.scss */
+/* line 115, ../sass/application.scss */
 .box {
   margin: 18px 18px 18px 0;
 }
-/* line 92, ../sass/application.scss */
+/* line 118, ../sass/application.scss */
 .box h3 {
   margin-top: 0;
 }
-/* line 96, ../sass/application.scss */
+/* line 122, ../sass/application.scss */
 .box p, .box ul {
   margin-bottom: 0;
 }
 
-/* line 101, ../sass/application.scss */
+/* line 127, ../sass/application.scss */
 .members.box {
   font-family: OpenSansSemibold;
 }
-/* line 108, ../sass/application.scss */
+/* line 134, ../sass/application.scss */
 .members.box a {
   font-family: OpenSansRegular;
 }
 
 /* Apply a natural box layout model to all elements. */
-/* line 119, ../sass/application.scss */
+/* line 145, ../sass/application.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 123, ../sass/application.scss */
+/* line 149, ../sass/application.scss */
 ul, ol {
   margin: 0;
   padding: 0;
   margin-bottom: 1.5em;
 }
 
-/* line 129, ../sass/application.scss */
+/* line 155, ../sass/application.scss */
 ul ul, ul ol, ol ol, ol ul {
   margin: 0 0 0 -30px;
 }
 
-/* line 133, ../sass/application.scss */
+/* line 159, ../sass/application.scss */
 li {
   position: relative;
   left: 18px;
@@ -1221,13 +1242,13 @@ li {
   text-indent: -30px;
 }
 
-/* line 141, ../sass/application.scss */
+/* line 167, ../sass/application.scss */
 pre {
   padding: 0 18px;
 }
 
 /* Top Menu */
-/* line 146, ../sass/application.scss */
+/* line 172, ../sass/application.scss */
 #top-menu {
   background: #343537;
   color: #e0e0e0;
@@ -1236,11 +1257,11 @@ pre {
   height: 3.6em;
   padding: 9px 0;
 }
-/* line 153, ../sass/application.scss */
+/* line 179, ../sass/application.scss */
 #top-menu > ul {
   padding-left: 40px;
 }
-/* line 157, ../sass/application.scss */
+/* line 183, ../sass/application.scss */
 #top-menu li {
   float: left;
   margin-right: 10px;
@@ -1249,30 +1270,30 @@ pre {
   padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 169, ../sass/application.scss */
+/* line 195, ../sass/application.scss */
 #top-menu a {
   color: #e0e0e0;
   text-decoration: none;
 }
-/* line 172, ../sass/application.scss */
+/* line 198, ../sass/application.scss */
 #top-menu a:hover {
   color: white;
 }
 
 /* Top Menu - Logged As */
-/* line 179, ../sass/application.scss */
+/* line 205, ../sass/application.scss */
 #loggedas {
   float: right;
 }
 
 /* Top Menu - Account */
-/* line 184, ../sass/application.scss */
+/* line 210, ../sass/application.scss */
 #account {
   float: right;
   margin-right: -10px;
   margin-left: 18px;
 }
-/* line 191, ../sass/application.scss */
+/* line 217, ../sass/application.scss */
 #account > ul {
   margin: 0 -10px 0 0;
   padding: 0;
@@ -1280,14 +1301,14 @@ pre {
 }
 
 /* Header */
-/* line 199, ../sass/application.scss */
+/* line 225, ../sass/application.scss */
 #header {
   padding-left: 40px;
   padding-right: 40px;
   height: 72px;
   background: #e0e0e0;
 }
-/* line 209, ../sass/application.scss */
+/* line 235, ../sass/application.scss */
 #header h1 {
   margin: 0;
   padding: 0.375em 0 0 0;
@@ -1299,23 +1320,23 @@ pre {
 }
 
 /* Header - Quick Search */
-/* line 220, ../sass/application.scss */
+/* line 246, ../sass/application.scss */
 #quick-search {
   float: right;
 }
 
 /* Header - Main Menu */
-/* line 225, ../sass/application.scss */
+/* line 251, ../sass/application.scss */
 #main-menu {
   margin: 0.75em 0 0 0;
   height: 18px;
 }
-/* line 229, ../sass/application.scss */
+/* line 255, ../sass/application.scss */
 #main-menu ul {
   margin: 0;
   padding: 0;
 }
-/* line 234, ../sass/application.scss */
+/* line 260, ../sass/application.scss */
 #main-menu li {
   float: left;
   list-style-type: none;
@@ -1325,32 +1346,32 @@ pre {
   padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 248, ../sass/application.scss */
+/* line 274, ../sass/application.scss */
 #main-menu a {
   text-decoration: none;
 }
 
 /* Main */
-/* line 254, ../sass/application.scss */
+/* line 280, ../sass/application.scss */
 #main {
   padding-left: 40px;
   padding-right: 40px;
 }
 
 /* Main - Sidebar */
-/* line 260, ../sass/application.scss */
+/* line 286, ../sass/application.scss */
 #sidebar {
   display: inline;
   float: right;
   width: 20%;
 }
-/* line 264, ../sass/application.scss */
+/* line 290, ../sass/application.scss */
 .nosidebar #sidebar {
   display: none;
 }
 
 /* Main - Content */
-/* line 270, ../sass/application.scss */
+/* line 296, ../sass/application.scss */
 #content {
   display: inline;
   float: left;
@@ -1363,41 +1384,41 @@ pre {
 * html #content {
   overflow-x: hidden;
 }
-/* line 275, ../sass/application.scss */
+/* line 301, ../sass/application.scss */
 #content p span.my-project {
   display: none;
 }
-/* line 279, ../sass/application.scss */
+/* line 305, ../sass/application.scss */
 #content .contextual {
   float: right;
   margin: 0 1.5em 0 0;
   margin-top: 1.5em;
 }
-/* line 285, ../sass/application.scss */
+/* line 311, ../sass/application.scss */
 #content .wiki.wiki-page .contextual {
   margin: 0;
 }
-/* line 292, ../sass/application.scss */
+/* line 318, ../sass/application.scss */
 #content .splitcontentleft {
   float: left;
   width: 50%;
 }
-/* line 297, ../sass/application.scss */
+/* line 323, ../sass/application.scss */
 #content .splitcontentright {
   float: right;
   width: 50%;
 }
-/* line 301, ../sass/application.scss */
+/* line 327, ../sass/application.scss */
 #content .splitcontentright .projects.box li {
   height: 18px;
   overflow: hidden;
 }
-/* line 307, ../sass/application.scss */
+/* line 333, ../sass/application.scss */
 #content .breadcrumb {
   margin: 0 0 0 -40px;
   padding: 1.5em 0 0 40px;
 }
-/* line 313, ../sass/application.scss */
+/* line 339, ../sass/application.scss */
 #content .toc {
   float: left;
   display: inline;
@@ -1411,11 +1432,11 @@ pre {
 * html #content .toc {
   overflow-x: hidden;
 }
-/* line 319, ../sass/application.scss */
+/* line 345, ../sass/application.scss */
 #content .toc, #content .toc ul, #content .toc ol {
   list-style-type: none;
 }
-/* line 328, ../sass/application.scss */
+/* line 354, ../sass/application.scss */
 #content .toc:before {
   content: "Contents";
   font-size: 1.33333em;
@@ -1425,7 +1446,7 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 337, ../sass/application.scss */
+/* line 363, ../sass/application.scss */
 #content .attachments:before {
   content: "Attachments";
   font-size: 1.33333em;
@@ -1435,42 +1456,32 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 347, ../sass/application.scss */
-#content > h2, #content > .wiki > h1 {
-  padding: 0.375em 0 0.375em 40px;
-  background: #f8f8f8;
-  font-family: "OpenSansLight";
-  font-weight: normal;
-  color: #666666;
-  font-size: 24px;
-  margin: 0 0 0 -40px;
-}
-/* line 358, ../sass/application.scss */
+/* line 372, ../sass/application.scss */
 .nosidebar #content {
   width: 100%;
   border-right: 0;
 }
-/* line 362, ../sass/application.scss */
+/* line 376, ../sass/application.scss */
 .nosidebar #content h2 {
   margin: 0 -50px 0 -40px;
 }
 
 /* Main - Content - Projects Index */
-/* line 370, ../sass/application.scss */
+/* line 384, ../sass/application.scss */
 #projects-index .projects.root {
   margin-top: 1.5em;
 }
-/* line 373, ../sass/application.scss */
+/* line 387, ../sass/application.scss */
 #projects-index .wiki.description {
   display: none;
 }
 
 /* Main - Content - Activity */
-/* line 380, ../sass/application.scss */
+/* line 394, ../sass/application.scss */
 #activity dt {
   margin: 1.5em 0 0 0;
 }
-/* line 382, ../sass/application.scss */
+/* line 396, ../sass/application.scss */
 #activity dt span {
   display: inline;
   float: left;
@@ -1481,17 +1492,17 @@ pre {
 * html #activity dt span {
   overflow-x: hidden;
 }
-/* line 386, ../sass/application.scss */
+/* line 400, ../sass/application.scss */
 #activity dd {
   padding-left: 80px;
 }
-/* line 388, ../sass/application.scss */
+/* line 402, ../sass/application.scss */
 #activity dd .author {
   display: block;
 }
 
 /* Footer */
-/* line 395, ../sass/application.scss */
+/* line 409, ../sass/application.scss */
 #footer {
   display: none;
 }
@@ -1592,7 +1603,7 @@ pre {
   color: #F92672;
 }
 
-/* line 409, ../sass/application.scss */
+/* line 423, ../sass/application.scss */
 .contextual img {
   display: none;
 }
