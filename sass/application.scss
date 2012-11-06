@@ -1,4 +1,6 @@
 @import "screen";
+@import "print";
+
 @import "partials/normalize-custom";
 @import "partials/fonts";
 
@@ -13,13 +15,18 @@ $base-line-height: 18px;
 @include establish-baseline();
 
 $dark-gray: #343537;
-$light-gray: #e0e0e0;
+$medium-gray: #e0e0e0;
+$light-gray: #f8f8f8;
 $white: #ffffff;
 
 #wrapper {
 	@include container;
 	width: 100%;
-	//@include showgrid;
+	@include showgrid;
+}
+
+a, a:link, a:visited {
+	color: #00758b;
 }
 
 h1 {
@@ -68,18 +75,45 @@ a.wiki-anchor:hover {
 	text-decoration: none;
 }
 
+b, strong {
+	font-weight: normal;
+	font-family: OpenSansSemibold;
+}
+
 
 p {
 	@include leader();
 	@include trailer();
 }
 
+.box {
+	margin: 18px 18px 18px 0;
+
+	h3 {
+		margin-top: 0;
+	}
+
+	p, ul {
+		margin-bottom: 0;
+	}
+}
+
+.members.box {
+	font-family: OpenSansSemibold;
+
+	h3 {
+
+	}
+
+	a {
+		font-family: OpenSansRegular;
+	}
+}
 
 
 
-$dark-gray: #343537;
-$light-gray: #e0e0e0;
-$white: #ffffff;
+
+
 
 /* Apply a natural box layout model to all elements. */
 * {
@@ -89,6 +123,7 @@ $white: #ffffff;
 ul, ol {
 	margin: 0;
 	padding: 0;
+	@include trailer();
 }
 
 ul ul, ul ol, ol ol, ol ul {
@@ -110,7 +145,7 @@ pre {
 /* Top Menu */
 #top-menu {
 	background: $dark-gray;
-	color: $light-gray;
+	color: $medium-gray;
 	@include adjust-font-size-to(10px);
 	height: 3.6em;
 	padding: 9px 0;
@@ -132,7 +167,7 @@ pre {
 	}
 
 	a {
-		color: $light-gray;
+		color: $medium-gray;
 		text-decoration: none;
 		&:hover {
 			color: $white;
@@ -164,9 +199,13 @@ pre {
 #header {
 	@include prepend(1);
 	@include append(1);
-	background: $light-gray;
+
+	// The header height should be constant across all pages.  This means  that
+	// long titles will be cut off instead of wrapping.
 	height: 4*$base-line-height;
 
+	background: $medium-gray;
+	
 	h1 {
 		margin: 0;
 		padding: 0.375em 0 0 0;
@@ -177,11 +216,18 @@ pre {
 	}
 }
 
+/* Header - Quick Search */
+#quick-search {
+	float: right;
+}
+
 /* Header - Main Menu */
 #main-menu {
-	//@include leader(1);
 	margin: 0.75em 0 0 0;
+	height: 18px;
+
 	ul {
+		margin: 0;
 		padding: 0;
 	}
 
@@ -212,16 +258,19 @@ pre {
 
 /* Main - Sidebar */
 #sidebar {
-	//@include column(6, true);
 	@include float-right;
-	width: 23%;
+	width: 20%;
+
+	.nosidebar & {
+		display: none;
+	}
 }
 
 /* Main - Content */
 #content {
 	@include column(14);
-	width: 75%;
-	border-right: 1px solid #DDD;
+	width: 78%;
+	border-right: 1px solid #333333;
 
 	p span.my-project {
 		display: none;
@@ -229,6 +278,30 @@ pre {
 
 	.contextual {
 		float: right;
+		margin: 0 1.5em 0 0;
+		@include leader;
+	}
+
+	.wiki.wiki-page .contextual {
+		margin: 0;
+		& + a + h2 {
+			
+		}
+	}
+
+	.splitcontentleft {
+		float: left;
+		width: 50%;
+	}
+
+	.splitcontentright {
+		float: right;
+		width: 50%;
+
+		.projects.box li {
+			height: $base-line-height;
+			overflow: hidden;
+		}
 	}
 
 	.breadcrumb {
@@ -270,10 +343,10 @@ pre {
 		font-family: OpenSansSemibold;
 	};
 
-	& > h2, .wiki > h1 {
+	// This is for the current page header.
+	& > h2, & > .wiki > h1 {
 		padding: 0.375em 0 0.375em 40px;
 		background: #f8f8f8;
-		border-bottom: 1px solid #dfdfdf;
 
 		font-family: "OpenSansLight";
 		font-weight: normal;
@@ -281,10 +354,22 @@ pre {
 		font-size: 24px;
 		margin: 0 0 0 -40px;
 	}
+
+	.nosidebar & {
+		width: 100%;
+		border-right: 0;
+
+		h2 {
+			margin: 0 -50px 0 -40px;
+		}
+	}
 }
 
 /* Main - Content - Projects Index */
 #projects-index {
+	.projects.root {
+		@include leader;
+	}
 	.wiki.description {
 		display: none;
 	}
@@ -321,6 +406,6 @@ pre {
 
 
 
-#quick-search, .contextual img {
+.contextual img {
 	display: none;
 }

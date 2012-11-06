@@ -533,6 +533,80 @@ body.two-col #content {
   overflow-x: hidden;
 }
 
+/* line 4, ../sass/print.scss */
+body.bp {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 10pt;
+}
+/* line 45, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .container {
+  background: none;
+}
+/* line 47, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr {
+  background: #cccccc;
+  color: #cccccc;
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+  padding: 0;
+  border: none;
+}
+/* line 55, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr.space {
+  background: white;
+  color: white;
+}
+/* line 58, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+/* line 60, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp code {
+  font-size: 0.9em;
+  font-family: "andale mono", "lucida console", monospace;
+}
+/* line 65, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a img {
+  border: none;
+}
+/* line 68, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a:link, body.bp a:visited {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* line 72, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp p img.top {
+  margin-top: 0;
+}
+/* line 74, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp blockquote {
+  margin: 1.5em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+/* line 79, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .small {
+  font-size: 0.9em;
+}
+/* line 81, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .large {
+  font-size: 1.1em;
+}
+/* line 83, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .quiet {
+  color: #999999;
+}
+/* line 85, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .hide {
+  display: none;
+}
+
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -993,23 +1067,38 @@ html {
   line-height: 1.5em;
 }
 
-/* line 19, ../sass/application.scss */
+/* line 22, ../sass/application.scss */
 #wrapper {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
   width: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, 0% 50%, 960 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(3.125%, rgba(100, 100, 225, 0.25)), color-stop(3.125%, rgba(0, 0, 0, 0)), color-stop(4.16667%, rgba(0, 0, 0, 0)), color-stop(4.16667%, rgba(100, 100, 225, 0.25)), color-stop(7.29167%, rgba(100, 100, 225, 0.25)), color-stop(7.29167%, rgba(0, 0, 0, 0)), color-stop(8.33333%, rgba(0, 0, 0, 0)), color-stop(8.33333%, rgba(100, 100, 225, 0.25)), color-stop(11.45833%, rgba(100, 100, 225, 0.25)), color-stop(11.45833%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(0, 0, 0, 0)), color-stop(12.5%, rgba(100, 100, 225, 0.25)), color-stop(15.625%, rgba(100, 100, 225, 0.25)), color-stop(15.625%, rgba(0, 0, 0, 0)), color-stop(16.66667%, rgba(0, 0, 0, 0)), color-stop(16.66667%, rgba(100, 100, 225, 0.25)), color-stop(19.79167%, rgba(100, 100, 225, 0.25)), color-stop(19.79167%, rgba(0, 0, 0, 0)), color-stop(20.83333%, rgba(0, 0, 0, 0)), color-stop(20.83333%, rgba(100, 100, 225, 0.25)), color-stop(23.95833%, rgba(100, 100, 225, 0.25)), color-stop(23.95833%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(100, 100, 225, 0.25)), color-stop(28.125%, rgba(100, 100, 225, 0.25)), color-stop(28.125%, rgba(0, 0, 0, 0)), color-stop(29.16667%, rgba(0, 0, 0, 0)), color-stop(29.16667%, rgba(100, 100, 225, 0.25)), color-stop(32.29167%, rgba(100, 100, 225, 0.25)), color-stop(32.29167%, rgba(0, 0, 0, 0)), color-stop(33.33333%, rgba(0, 0, 0, 0)), color-stop(33.33333%, rgba(100, 100, 225, 0.25)), color-stop(36.45833%, rgba(100, 100, 225, 0.25)), color-stop(36.45833%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(0, 0, 0, 0)), color-stop(37.5%, rgba(100, 100, 225, 0.25)), color-stop(40.625%, rgba(100, 100, 225, 0.25)), color-stop(40.625%, rgba(0, 0, 0, 0)), color-stop(41.66667%, rgba(0, 0, 0, 0)), color-stop(41.66667%, rgba(100, 100, 225, 0.25)), color-stop(44.79167%, rgba(100, 100, 225, 0.25)), color-stop(44.79167%, rgba(0, 0, 0, 0)), color-stop(45.83333%, rgba(0, 0, 0, 0)), color-stop(45.83333%, rgba(100, 100, 225, 0.25)), color-stop(48.95833%, rgba(100, 100, 225, 0.25)), color-stop(48.95833%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(0, 0, 0, 0)), color-stop(50%, rgba(100, 100, 225, 0.25)), color-stop(53.125%, rgba(100, 100, 225, 0.25)), color-stop(53.125%, rgba(0, 0, 0, 0)), color-stop(54.16667%, rgba(0, 0, 0, 0)), color-stop(54.16667%, rgba(100, 100, 225, 0.25)), color-stop(57.29167%, rgba(100, 100, 225, 0.25)), color-stop(57.29167%, rgba(0, 0, 0, 0)), color-stop(58.33333%, rgba(0, 0, 0, 0)), color-stop(58.33333%, rgba(100, 100, 225, 0.25)), color-stop(61.45833%, rgba(100, 100, 225, 0.25)), color-stop(61.45833%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(0, 0, 0, 0)), color-stop(62.5%, rgba(100, 100, 225, 0.25)), color-stop(65.625%, rgba(100, 100, 225, 0.25)), color-stop(65.625%, rgba(0, 0, 0, 0)), color-stop(66.66667%, rgba(0, 0, 0, 0)), color-stop(66.66667%, rgba(100, 100, 225, 0.25)), color-stop(69.79167%, rgba(100, 100, 225, 0.25)), color-stop(69.79167%, rgba(0, 0, 0, 0)), color-stop(70.83333%, rgba(0, 0, 0, 0)), color-stop(70.83333%, rgba(100, 100, 225, 0.25)), color-stop(73.95833%, rgba(100, 100, 225, 0.25)), color-stop(73.95833%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(0, 0, 0, 0)), color-stop(75%, rgba(100, 100, 225, 0.25)), color-stop(78.125%, rgba(100, 100, 225, 0.25)), color-stop(78.125%, rgba(0, 0, 0, 0)), color-stop(79.16667%, rgba(0, 0, 0, 0)), color-stop(79.16667%, rgba(100, 100, 225, 0.25)), color-stop(82.29167%, rgba(100, 100, 225, 0.25)), color-stop(82.29167%, rgba(0, 0, 0, 0)), color-stop(83.33333%, rgba(0, 0, 0, 0)), color-stop(83.33333%, rgba(100, 100, 225, 0.25)), color-stop(86.45833%, rgba(100, 100, 225, 0.25)), color-stop(86.45833%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(0, 0, 0, 0)), color-stop(87.5%, rgba(100, 100, 225, 0.25)), color-stop(90.625%, rgba(100, 100, 225, 0.25)), color-stop(90.625%, rgba(0, 0, 0, 0)), color-stop(91.66667%, rgba(0, 0, 0, 0)), color-stop(91.66667%, rgba(100, 100, 225, 0.25)), color-stop(94.79167%, rgba(100, 100, 225, 0.25)), color-stop(94.79167%, rgba(0, 0, 0, 0)), color-stop(95.83333%, rgba(0, 0, 0, 0)), color-stop(95.83333%, rgba(100, 100, 225, 0.25)), color-stop(98.95833%, rgba(100, 100, 225, 0.25)), color-stop(98.95833%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
+  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
+  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), -o-linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
+  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%), linear-gradient(left, rgba(0, 0, 0, 0) 0px, rgba(100, 100, 225, 0.25) 0px, rgba(100, 100, 225, 0.25) 30px, rgba(0, 0, 0, 0) 30px, rgba(0, 0, 0, 0) 40px, rgba(100, 100, 225, 0.25) 40px, rgba(100, 100, 225, 0.25) 70px, rgba(0, 0, 0, 0) 70px, rgba(0, 0, 0, 0) 80px, rgba(100, 100, 225, 0.25) 80px, rgba(100, 100, 225, 0.25) 110px, rgba(0, 0, 0, 0) 110px, rgba(0, 0, 0, 0) 120px, rgba(100, 100, 225, 0.25) 120px, rgba(100, 100, 225, 0.25) 150px, rgba(0, 0, 0, 0) 150px, rgba(0, 0, 0, 0) 160px, rgba(100, 100, 225, 0.25) 160px, rgba(100, 100, 225, 0.25) 190px, rgba(0, 0, 0, 0) 190px, rgba(0, 0, 0, 0) 200px, rgba(100, 100, 225, 0.25) 200px, rgba(100, 100, 225, 0.25) 230px, rgba(0, 0, 0, 0) 230px, rgba(0, 0, 0, 0) 240px, rgba(100, 100, 225, 0.25) 240px, rgba(100, 100, 225, 0.25) 270px, rgba(0, 0, 0, 0) 270px, rgba(0, 0, 0, 0) 280px, rgba(100, 100, 225, 0.25) 280px, rgba(100, 100, 225, 0.25) 310px, rgba(0, 0, 0, 0) 310px, rgba(0, 0, 0, 0) 320px, rgba(100, 100, 225, 0.25) 320px, rgba(100, 100, 225, 0.25) 350px, rgba(0, 0, 0, 0) 350px, rgba(0, 0, 0, 0) 360px, rgba(100, 100, 225, 0.25) 360px, rgba(100, 100, 225, 0.25) 390px, rgba(0, 0, 0, 0) 390px, rgba(0, 0, 0, 0) 400px, rgba(100, 100, 225, 0.25) 400px, rgba(100, 100, 225, 0.25) 430px, rgba(0, 0, 0, 0) 430px, rgba(0, 0, 0, 0) 440px, rgba(100, 100, 225, 0.25) 440px, rgba(100, 100, 225, 0.25) 470px, rgba(0, 0, 0, 0) 470px, rgba(0, 0, 0, 0) 480px, rgba(100, 100, 225, 0.25) 480px, rgba(100, 100, 225, 0.25) 510px, rgba(0, 0, 0, 0) 510px, rgba(0, 0, 0, 0) 520px, rgba(100, 100, 225, 0.25) 520px, rgba(100, 100, 225, 0.25) 550px, rgba(0, 0, 0, 0) 550px, rgba(0, 0, 0, 0) 560px, rgba(100, 100, 225, 0.25) 560px, rgba(100, 100, 225, 0.25) 590px, rgba(0, 0, 0, 0) 590px, rgba(0, 0, 0, 0) 600px, rgba(100, 100, 225, 0.25) 600px, rgba(100, 100, 225, 0.25) 630px, rgba(0, 0, 0, 0) 630px, rgba(0, 0, 0, 0) 640px, rgba(100, 100, 225, 0.25) 640px, rgba(100, 100, 225, 0.25) 670px, rgba(0, 0, 0, 0) 670px, rgba(0, 0, 0, 0) 680px, rgba(100, 100, 225, 0.25) 680px, rgba(100, 100, 225, 0.25) 710px, rgba(0, 0, 0, 0) 710px, rgba(0, 0, 0, 0) 720px, rgba(100, 100, 225, 0.25) 720px, rgba(100, 100, 225, 0.25) 750px, rgba(0, 0, 0, 0) 750px, rgba(0, 0, 0, 0) 760px, rgba(100, 100, 225, 0.25) 760px, rgba(100, 100, 225, 0.25) 790px, rgba(0, 0, 0, 0) 790px, rgba(0, 0, 0, 0) 800px, rgba(100, 100, 225, 0.25) 800px, rgba(100, 100, 225, 0.25) 830px, rgba(0, 0, 0, 0) 830px, rgba(0, 0, 0, 0) 840px, rgba(100, 100, 225, 0.25) 840px, rgba(100, 100, 225, 0.25) 870px, rgba(0, 0, 0, 0) 870px, rgba(0, 0, 0, 0) 880px, rgba(100, 100, 225, 0.25) 880px, rgba(100, 100, 225, 0.25) 910px, rgba(0, 0, 0, 0) 910px, rgba(0, 0, 0, 0) 920px, rgba(100, 100, 225, 0.25) 920px, rgba(100, 100, 225, 0.25) 950px, rgba(0, 0, 0, 0) 950px, rgba(0, 0, 0, 0) 960px);
+  -webkit-background-size: 100% 18px, auto;
+  -moz-background-size: 100% 18px, auto;
+  -o-background-size: 100% 18px, auto;
+  background-size: 100% 18px, auto;
+  background-position: left top;
 }
 
-/* line 25, ../sass/application.scss */
+/* line 28, ../sass/application.scss */
+a, a:link, a:visited {
+  color: #00758b;
+}
+
+/* line 32, ../sass/application.scss */
 h1 {
   font-size: 1.66667em;
   line-height: 1.8em;
   margin: 0.9em 0 0 0;
 }
 
-/* line 29, ../sass/application.scss */
+/* line 36, ../sass/application.scss */
 h2 {
   font-size: 1.33333em;
   line-height: 2.25em;
@@ -1017,84 +1106,113 @@ h2 {
   margin: 1.125em 0 0 0;
 }
 
-/* line 34, ../sass/application.scss */
+/* line 41, ../sass/application.scss */
 h3 {
   font-size: 1.08333em;
   line-height: 1.38462em;
   margin: 1.38462em 0;
 }
 
-/* line 38, ../sass/application.scss */
+/* line 45, ../sass/application.scss */
 h4 {
   font-size: 1em;
   line-height: 1.5em;
   margin: 1.5em 0;
 }
 
-/* line 42, ../sass/application.scss */
+/* line 49, ../sass/application.scss */
 h5 {
   font-size: 0.91667em;
   line-height: 1.63636em;
   margin: 1.63636em 0;
 }
 
-/* line 46, ../sass/application.scss */
+/* line 53, ../sass/application.scss */
 h6 {
   font-size: 0.83333em;
   line-height: 1.8em;
   margin: 1.8em 0;
 }
 
-/* line 51, ../sass/application.scss */
+/* line 58, ../sass/application.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #00648B;
 }
 
-/* line 55, ../sass/application.scss */
+/* line 62, ../sass/application.scss */
 h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
   display: inline;
   color: #DDD;
 }
 
-/* line 60, ../sass/application.scss */
+/* line 67, ../sass/application.scss */
 a.wiki-anchor {
   display: none;
   margin-left: 6px;
   text-decoration: none;
 }
 
-/* line 66, ../sass/application.scss */
+/* line 73, ../sass/application.scss */
 a.wiki-anchor:hover {
   color: #AAA !important;
   text-decoration: none;
 }
 
-/* line 72, ../sass/application.scss */
+/* line 78, ../sass/application.scss */
+b, strong {
+  font-weight: normal;
+  font-family: OpenSansSemibold;
+}
+
+/* line 84, ../sass/application.scss */
 p {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
+/* line 89, ../sass/application.scss */
+.box {
+  margin: 18px 18px 18px 0;
+}
+/* line 92, ../sass/application.scss */
+.box h3 {
+  margin-top: 0;
+}
+/* line 96, ../sass/application.scss */
+.box p, .box ul {
+  margin-bottom: 0;
+}
+
+/* line 101, ../sass/application.scss */
+.members.box {
+  font-family: OpenSansSemibold;
+}
+/* line 108, ../sass/application.scss */
+.members.box a {
+  font-family: OpenSansRegular;
+}
+
 /* Apply a natural box layout model to all elements. */
-/* line 85, ../sass/application.scss */
+/* line 119, ../sass/application.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 89, ../sass/application.scss */
+/* line 123, ../sass/application.scss */
 ul, ol {
   margin: 0;
   padding: 0;
+  margin-bottom: 1.5em;
 }
 
-/* line 94, ../sass/application.scss */
+/* line 129, ../sass/application.scss */
 ul ul, ul ol, ol ol, ol ul {
   margin: 0 0 0 -30px;
 }
 
-/* line 98, ../sass/application.scss */
+/* line 133, ../sass/application.scss */
 li {
   position: relative;
   left: 18px;
@@ -1103,13 +1221,13 @@ li {
   text-indent: -30px;
 }
 
-/* line 106, ../sass/application.scss */
+/* line 141, ../sass/application.scss */
 pre {
   padding: 0 18px;
 }
 
 /* Top Menu */
-/* line 111, ../sass/application.scss */
+/* line 146, ../sass/application.scss */
 #top-menu {
   background: #343537;
   color: #e0e0e0;
@@ -1118,11 +1236,11 @@ pre {
   height: 3.6em;
   padding: 9px 0;
 }
-/* line 118, ../sass/application.scss */
+/* line 153, ../sass/application.scss */
 #top-menu > ul {
   padding-left: 40px;
 }
-/* line 122, ../sass/application.scss */
+/* line 157, ../sass/application.scss */
 #top-menu li {
   float: left;
   margin-right: 10px;
@@ -1131,30 +1249,30 @@ pre {
   padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 134, ../sass/application.scss */
+/* line 169, ../sass/application.scss */
 #top-menu a {
   color: #e0e0e0;
   text-decoration: none;
 }
-/* line 137, ../sass/application.scss */
+/* line 172, ../sass/application.scss */
 #top-menu a:hover {
   color: white;
 }
 
 /* Top Menu - Logged As */
-/* line 144, ../sass/application.scss */
+/* line 179, ../sass/application.scss */
 #loggedas {
   float: right;
 }
 
 /* Top Menu - Account */
-/* line 149, ../sass/application.scss */
+/* line 184, ../sass/application.scss */
 #account {
   float: right;
   margin-right: -10px;
   margin-left: 18px;
 }
-/* line 156, ../sass/application.scss */
+/* line 191, ../sass/application.scss */
 #account > ul {
   margin: 0 -10px 0 0;
   padding: 0;
@@ -1162,14 +1280,14 @@ pre {
 }
 
 /* Header */
-/* line 164, ../sass/application.scss */
+/* line 199, ../sass/application.scss */
 #header {
   padding-left: 40px;
   padding-right: 40px;
-  background: #e0e0e0;
   height: 72px;
+  background: #e0e0e0;
 }
-/* line 170, ../sass/application.scss */
+/* line 209, ../sass/application.scss */
 #header h1 {
   margin: 0;
   padding: 0.375em 0 0 0;
@@ -1180,16 +1298,24 @@ pre {
   line-height: 1.5em;
 }
 
+/* Header - Quick Search */
+/* line 220, ../sass/application.scss */
+#quick-search {
+  float: right;
+}
+
 /* Header - Main Menu */
-/* line 181, ../sass/application.scss */
+/* line 225, ../sass/application.scss */
 #main-menu {
   margin: 0.75em 0 0 0;
+  height: 18px;
 }
-/* line 184, ../sass/application.scss */
+/* line 229, ../sass/application.scss */
 #main-menu ul {
+  margin: 0;
   padding: 0;
 }
-/* line 188, ../sass/application.scss */
+/* line 234, ../sass/application.scss */
 #main-menu li {
   float: left;
   list-style-type: none;
@@ -1199,54 +1325,79 @@ pre {
   padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 202, ../sass/application.scss */
+/* line 248, ../sass/application.scss */
 #main-menu a {
   text-decoration: none;
 }
 
 /* Main */
-/* line 208, ../sass/application.scss */
+/* line 254, ../sass/application.scss */
 #main {
   padding-left: 40px;
   padding-right: 40px;
 }
 
 /* Main - Sidebar */
-/* line 214, ../sass/application.scss */
+/* line 260, ../sass/application.scss */
 #sidebar {
   display: inline;
   float: right;
-  width: 23%;
+  width: 20%;
+}
+/* line 264, ../sass/application.scss */
+.nosidebar #sidebar {
+  display: none;
 }
 
 /* Main - Content */
-/* line 221, ../sass/application.scss */
+/* line 270, ../sass/application.scss */
 #content {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 550px;
-  width: 75%;
-  border-right: 1px solid #DDD;
+  width: 78%;
+  border-right: 1px solid #333333;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content {
   overflow-x: hidden;
 }
-/* line 226, ../sass/application.scss */
+/* line 275, ../sass/application.scss */
 #content p span.my-project {
   display: none;
 }
-/* line 230, ../sass/application.scss */
+/* line 279, ../sass/application.scss */
 #content .contextual {
   float: right;
+  margin: 0 1.5em 0 0;
+  margin-top: 1.5em;
 }
-/* line 234, ../sass/application.scss */
+/* line 285, ../sass/application.scss */
+#content .wiki.wiki-page .contextual {
+  margin: 0;
+}
+/* line 292, ../sass/application.scss */
+#content .splitcontentleft {
+  float: left;
+  width: 50%;
+}
+/* line 297, ../sass/application.scss */
+#content .splitcontentright {
+  float: right;
+  width: 50%;
+}
+/* line 301, ../sass/application.scss */
+#content .splitcontentright .projects.box li {
+  height: 18px;
+  overflow: hidden;
+}
+/* line 307, ../sass/application.scss */
 #content .breadcrumb {
   margin: 0 0 0 -40px;
   padding: 1.5em 0 0 40px;
 }
-/* line 240, ../sass/application.scss */
+/* line 313, ../sass/application.scss */
 #content .toc {
   float: left;
   display: inline;
@@ -1260,11 +1411,11 @@ pre {
 * html #content .toc {
   overflow-x: hidden;
 }
-/* line 246, ../sass/application.scss */
+/* line 319, ../sass/application.scss */
 #content .toc, #content .toc ul, #content .toc ol {
   list-style-type: none;
 }
-/* line 255, ../sass/application.scss */
+/* line 328, ../sass/application.scss */
 #content .toc:before {
   content: "Contents";
   font-size: 1.33333em;
@@ -1274,7 +1425,7 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 264, ../sass/application.scss */
+/* line 337, ../sass/application.scss */
 #content .attachments:before {
   content: "Attachments";
   font-size: 1.33333em;
@@ -1284,30 +1435,42 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 273, ../sass/application.scss */
-#content > h2, #content .wiki > h1 {
+/* line 347, ../sass/application.scss */
+#content > h2, #content > .wiki > h1 {
   padding: 0.375em 0 0.375em 40px;
   background: #f8f8f8;
-  border-bottom: 1px solid #dfdfdf;
   font-family: "OpenSansLight";
   font-weight: normal;
   color: #666666;
   font-size: 24px;
   margin: 0 0 0 -40px;
 }
+/* line 358, ../sass/application.scss */
+.nosidebar #content {
+  width: 100%;
+  border-right: 0;
+}
+/* line 362, ../sass/application.scss */
+.nosidebar #content h2 {
+  margin: 0 -50px 0 -40px;
+}
 
 /* Main - Content - Projects Index */
-/* line 288, ../sass/application.scss */
+/* line 370, ../sass/application.scss */
+#projects-index .projects.root {
+  margin-top: 1.5em;
+}
+/* line 373, ../sass/application.scss */
 #projects-index .wiki.description {
   display: none;
 }
 
 /* Main - Content - Activity */
-/* line 295, ../sass/application.scss */
+/* line 380, ../sass/application.scss */
 #activity dt {
   margin: 1.5em 0 0 0;
 }
-/* line 297, ../sass/application.scss */
+/* line 382, ../sass/application.scss */
 #activity dt span {
   display: inline;
   float: left;
@@ -1318,17 +1481,17 @@ pre {
 * html #activity dt span {
   overflow-x: hidden;
 }
-/* line 301, ../sass/application.scss */
+/* line 386, ../sass/application.scss */
 #activity dd {
   padding-left: 80px;
 }
-/* line 303, ../sass/application.scss */
+/* line 388, ../sass/application.scss */
 #activity dd .author {
   display: block;
 }
 
 /* Footer */
-/* line 310, ../sass/application.scss */
+/* line 395, ../sass/application.scss */
 #footer {
   display: none;
 }
@@ -1429,7 +1592,7 @@ pre {
   color: #F92672;
 }
 
-/* line 324, ../sass/application.scss */
-#quick-search, .contextual img {
+/* line 409, ../sass/application.scss */
+.contextual img {
   display: none;
 }
