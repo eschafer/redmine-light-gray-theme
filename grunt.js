@@ -48,7 +48,7 @@
 			sass: {
 				dev: {
 					files: {
-						"stylesheets/application.css": "stylesheets/application.scss"
+						"stylesheets/application.css": "sass/application.scss"
 					}
 				}
 			}
@@ -57,6 +57,6 @@
 		grunt.loadNpmTasks('grunt-contrib-sass');
 
 		// Default task.
-		grunt.registerTask("default", "lint sass");
+		grunt.registerTask("default", "lint");
 	};
 }());

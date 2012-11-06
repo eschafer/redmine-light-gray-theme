@@ -1,0 +1,428 @@
+@import "screen";
+@import "print";
+
+@import "partials/normalize-custom";
+@import "partials/fonts";
+
+/* */
+@import "compass/css3/box-sizing";
+@import "compass/css3/text-shadow";
+
+/* Vertical Rhythm */
+@import "compass/typography";
+$base-font-size: 12px;
+$base-line-height: 18px;
+@include establish-baseline();
+
+$dark-gray: #343537;
+$medium-gray: #e0e0e0;
+$light-gray: #f8f8f8;
+$white: #ffffff;
+
+#wrapper {
+	@include container;
+	width: 100%;
+	//@include showgrid;
+}
+
+a, a:link, a:visited {
+	color: #00758b;
+}
+
+h1 {
+	@include adjust-font-size-to(24px);
+	margin: (18/24 * 1em) 0 0 0;
+}
+h2, .wiki h1 {
+	@include adjust-font-size-to(20px);
+	margin: (18/20 * 1em) 0 0 0;
+}
+h3, .wiki h2 {
+	@include adjust-font-size-to(16px);
+	line-height: 36px;
+	margin: (18/16 * 1em) 0 0 0;
+}
+h4, .wiki h3 {
+	@include adjust-font-size-to(13px);
+	margin: (18/13 * 1em) 0;
+}
+h5, .wiki h4 {
+	@include adjust-font-size-to(12px);
+	margin: (18/12 * 1em) 0;
+}
+h6, .wiki h5 {
+	@include adjust-font-size-to(11px);
+	margin: (18/11 * 1em) 0;
+}
+.wiki h6 {
+	@include adjust-font-size-to(10px);
+	margin: (18/10 * 1em) 0;
+}
+
+h1, h2, h3, h4, h5, h6, .wiki h1, .wiki h2, .wiki h3, .wiki h4, .wiki h5, .wiki h6 {
+	color: #00648B;
+}
+
+// This is for the current page header.
+#content > h2, #content > .wiki > h1 {
+	@include adjust-font-size-to(24px);
+	
+	// Push the margin back to the edge in order to color the background.
+	margin: 0 0 0 -40px;
+	padding: $base-line-height/2 0 $base-line-height/2 40px;
+	
+	background: #f8f8f8;
+	color: #666666;
+	font: {
+		size: 24px;
+		family: "OpenSansLight";
+		weight: normal;
+	}
+}
+
+h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
+	display: inline;
+	color: #DDD;
+}
+
+a.wiki-anchor {
+	display: none;
+	margin-left: 6px;
+	text-decoration: none;
+}
+
+a.wiki-anchor:hover {
+	color: #AAA !important;
+	text-decoration: none;
+}
+
+b, strong {
+	font-weight: normal;
+	font-family: OpenSansSemibold;
+}
+
+
+p {
+	@include leader();
+	@include trailer();
+}
+
+.box {
+	&.members {
+		font-family: OpenSansSemibold;
+	}
+
+	a {
+		font-family: OpenSansRegular;
+	}
+
+	p {
+		margin-top: 0;
+	}
+}
+
+
+
+
+
+
+/* Apply a natural box layout model to all elements. */
+* {
+	@include box-sizing("border-box");
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	@include trailer();
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0 0 0 -30px;
+}
+
+li {
+	position: relative;
+	left: 18px;
+	margin: 0 18px 0 0;
+	padding: 0 0 0 30px;
+	text-indent: -30px;
+}
+
+pre {
+	padding: 0 $base-line-height;
+}
+
+/* Top Menu */
+#top-menu {
+	background: $dark-gray;
+	color: $medium-gray;
+	@include adjust-font-size-to(10px);
+	height: 3.6em;
+	padding: 9px 0;
+
+	& > ul {
+		@include prepend(1);
+	}
+
+	li {
+		float: left;
+		margin: {
+			right: $blueprint-grid-margin;
+		}
+		list-style-type: none;
+
+		position: static;
+		padding: 0 10px 0 0;
+		text-indent: 0;
+	}
+
+	a {
+		color: $medium-gray;
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		};
+	}
+}
+
+/* Top Menu - Logged As */
+#loggedas {
+	float: right;
+}
+
+/* Top Menu - Account */
+#account {
+	float: right;
+	margin: {
+		right: -10px;
+		left: $base-line-height;
+	}
+
+	& > ul {
+		margin: 0 -10px 0 0;
+		padding: 0;
+		@include append(1);
+	}
+}
+
+/* Header */
+#header {
+	@include prepend(1);
+	@include append(1);
+
+	// The header height should be constant across all pages.  This means  that
+	// long titles will be cut off instead of wrapping.
+	height: 4*$base-line-height;
+
+	background: $medium-gray;
+	
+	h1 {
+		margin: 0;
+		padding: 0.375em 0 0 0;
+		font-family: OpenSansRegular;
+		color: #343537;
+		@include text-shadow(#ffffff 0px 1px 0px);
+		@include adjust-font-size-to(24px);
+	}
+}
+
+/* Header - Quick Search */
+#quick-search {
+	float: right;
+}
+
+/* Header - Main Menu */
+#main-menu {
+	margin: 0.75em 0 0 0;
+	height: 18px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		float: left;
+		list-style-type: none;
+
+		margin: {
+			right: $blueprint-grid-margin;
+		}
+		list-style-type: none;
+
+		position: static;
+		padding: 0 10px 0 0;
+		text-indent: 0;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+/* Main */
+#main {
+	@include prepend(1);
+	@include append(1);
+}
+
+/* Main - Sidebar */
+#sidebar {
+	@include float-right;
+	width: 20%;
+
+	.nosidebar & {
+		display: none;
+	}
+}
+
+/* Main - Content */
+#content {
+	@include column(14);
+	width: 78%;
+	min-height: 600px;
+	border-right: 1px solid #cccccc;
+
+	p span.my-project {
+		display: none;
+	}
+
+	.contextual {
+		float: right;
+		margin: 0 1.5em 0 0;
+		@include leader;
+	}
+
+	.wiki.wiki-page .contextual {
+		margin: 0;
+		& + a + h2 {
+			
+		}
+	}
+
+	.splitcontentleft {
+		float: left;
+		width: 50%;
+	}
+
+	.splitcontentright {
+		float: right;
+		width: 50%;
+
+		.projects.box li {
+			height: $base-line-height;
+			overflow: hidden;
+		}
+	}
+
+	.breadcrumb {
+		margin: 0 0 0 -40px;
+		padding: $base-line-height/2 0 0 40px;
+		background: #f8f8f8;
+		height: $base-line-height;
+		font-size: 0.8em;
+	}
+
+	.toc {
+		float: left;
+		@include column(6);
+		margin: 1.5em 0 0 0;
+		padding: 0;
+
+		&, ul, ol {
+			list-style-type: none;
+		}
+
+		&.right {
+			//float: right;
+		}
+	}
+
+	.toc:before {
+		content: "Contents";
+		@include adjust-font-size-to(16px);
+		line-height: 36px;
+		margin: (18/16 * 1em) 0 0 0;
+		color: #00648B;
+		font-family: OpenSansSemibold;
+	}
+
+	.attachments:before {
+		content: "Attachments";
+		@include adjust-font-size-to(16px);
+		line-height: 36px;
+		margin: (18/16 * 1em) 0 0 0;
+		color: #00648B;
+		font-family: OpenSansSemibold;
+	};
+
+	.nosidebar & {
+		width: 100%;
+		border-right: 0;
+
+		h2 {
+			margin: 0 -50px 0 -40px;
+		}
+	}
+}
+
+/* Main - Content - Projects Index */
+#projects-index {
+	
+	.projects.root {
+		@include leader;
+	}
+
+	.wiki.description {
+		display: none;
+	}
+
+	& > ul > li {
+		list-style-type: none;
+		left: 0;
+
+		@include adjust-font-size-to(13px);
+		margin: (18/13 * 1em) 0;
+	}
+}
+
+/* Main - Content - Activity */
+#activity {
+	dt {
+		margin: 1.5em 0 0 0;
+		span {
+			@include column(2);
+		}
+	}
+	dd {
+		@include prepend(2);
+		.author {
+			display: block;
+		}
+	}
+}
+
+/* Footer */
+#footer {
+	clear: both;
+	border-top: 1px solid #cccccc;
+	font-size: 0.9em;
+	color: #AAA;
+	padding: 5px;
+	background: white;
+}
+
+@import "partials/code-ray";
+
+
+
+
+
+
+
+
+
+.contextual img {
+	display: none;
+}
