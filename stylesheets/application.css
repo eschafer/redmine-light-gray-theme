@@ -1358,47 +1358,51 @@ pre {
   margin-right: 10px;
   width: 550px;
   width: 78%;
-  border-right: 1px solid #333333;
+  min-height: 600px;
+  border-right: 1px solid #cccccc;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content {
   overflow-x: hidden;
 }
-/* line 286, ../sass/application.scss */
+/* line 287, ../sass/application.scss */
 #content p span.my-project {
   display: none;
 }
-/* line 290, ../sass/application.scss */
+/* line 291, ../sass/application.scss */
 #content .contextual {
   float: right;
   margin: 0 1.5em 0 0;
   margin-top: 1.5em;
 }
-/* line 296, ../sass/application.scss */
+/* line 297, ../sass/application.scss */
 #content .wiki.wiki-page .contextual {
   margin: 0;
 }
-/* line 303, ../sass/application.scss */
+/* line 304, ../sass/application.scss */
 #content .splitcontentleft {
   float: left;
   width: 50%;
 }
-/* line 308, ../sass/application.scss */
+/* line 309, ../sass/application.scss */
 #content .splitcontentright {
   float: right;
   width: 50%;
 }
-/* line 312, ../sass/application.scss */
+/* line 313, ../sass/application.scss */
 #content .splitcontentright .projects.box li {
   height: 18px;
   overflow: hidden;
 }
-/* line 318, ../sass/application.scss */
+/* line 319, ../sass/application.scss */
 #content .breadcrumb {
   margin: 0 0 0 -40px;
-  padding: 1.5em 0 0 40px;
+  padding: 9px 0 0 40px;
+  background: #f8f8f8;
+  height: 18px;
+  font-size: 0.8em;
 }
-/* line 324, ../sass/application.scss */
+/* line 327, ../sass/application.scss */
 #content .toc {
   float: left;
   display: inline;
@@ -1412,11 +1416,11 @@ pre {
 * html #content .toc {
   overflow-x: hidden;
 }
-/* line 330, ../sass/application.scss */
+/* line 333, ../sass/application.scss */
 #content .toc, #content .toc ul, #content .toc ol {
   list-style-type: none;
 }
-/* line 339, ../sass/application.scss */
+/* line 342, ../sass/application.scss */
 #content .toc:before {
   content: "Contents";
   font-size: 1.33333em;
@@ -1426,7 +1430,7 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 348, ../sass/application.scss */
+/* line 351, ../sass/application.scss */
 #content .attachments:before {
   content: "Attachments";
   font-size: 1.33333em;
@@ -1436,32 +1440,40 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 357, ../sass/application.scss */
+/* line 360, ../sass/application.scss */
 .nosidebar #content {
   width: 100%;
   border-right: 0;
 }
-/* line 361, ../sass/application.scss */
+/* line 364, ../sass/application.scss */
 .nosidebar #content h2 {
   margin: 0 -50px 0 -40px;
 }
 
 /* Main - Content - Projects Index */
-/* line 369, ../sass/application.scss */
+/* line 373, ../sass/application.scss */
 #projects-index .projects.root {
   margin-top: 1.5em;
 }
-/* line 372, ../sass/application.scss */
+/* line 377, ../sass/application.scss */
 #projects-index .wiki.description {
   display: none;
 }
+/* line 381, ../sass/application.scss */
+#projects-index > ul > li {
+  list-style-type: none;
+  left: 0;
+  font-size: 1.08333em;
+  line-height: 1.38462em;
+  margin: 1.38462em 0;
+}
 
 /* Main - Content - Activity */
-/* line 379, ../sass/application.scss */
+/* line 392, ../sass/application.scss */
 #activity dt {
   margin: 1.5em 0 0 0;
 }
-/* line 381, ../sass/application.scss */
+/* line 394, ../sass/application.scss */
 #activity dt span {
   display: inline;
   float: left;
@@ -1472,19 +1484,24 @@ pre {
 * html #activity dt span {
   overflow-x: hidden;
 }
-/* line 385, ../sass/application.scss */
+/* line 398, ../sass/application.scss */
 #activity dd {
   padding-left: 80px;
 }
-/* line 387, ../sass/application.scss */
+/* line 400, ../sass/application.scss */
 #activity dd .author {
   display: block;
 }
 
 /* Footer */
-/* line 394, ../sass/application.scss */
+/* line 407, ../sass/application.scss */
 #footer {
-  display: none;
+  clear: both;
+  border-top: 1px solid #cccccc;
+  font-size: 0.9em;
+  color: #AAA;
+  padding: 5px;
+  background: white;
 }
 
 /************* CodeRay styles *************/
@@ -1583,7 +1600,7 @@ pre {
   color: #F92672;
 }
 
-/* line 408, ../sass/application.scss */
+/* line 426, ../sass/application.scss */
 .contextual img {
   display: none;
 }

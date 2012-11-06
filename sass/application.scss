@@ -281,7 +281,8 @@ pre {
 #content {
 	@include column(14);
 	width: 78%;
-	border-right: 1px solid #333333;
+	min-height: 600px;
+	border-right: 1px solid #cccccc;
 
 	p span.my-project {
 		display: none;
@@ -317,8 +318,10 @@ pre {
 
 	.breadcrumb {
 		margin: 0 0 0 -40px;
-		padding: 1.5em 0 0 40px;
-		//background: #f8f8f8;
+		padding: $base-line-height/2 0 0 40px;
+		background: #f8f8f8;
+		height: $base-line-height;
+		font-size: 0.8em;
 	}
 
 	.toc {
@@ -366,11 +369,21 @@ pre {
 
 /* Main - Content - Projects Index */
 #projects-index {
+	
 	.projects.root {
 		@include leader;
 	}
+
 	.wiki.description {
 		display: none;
+	}
+
+	& > ul > li {
+		list-style-type: none;
+		left: 0;
+
+		@include adjust-font-size-to(13px);
+		margin: (18/13 * 1em) 0;
 	}
 }
 
@@ -392,7 +405,12 @@ pre {
 
 /* Footer */
 #footer {
-	display: none;
+	clear: both;
+	border-top: 1px solid #cccccc;
+	font-size: 0.9em;
+	color: #AAA;
+	padding: 5px;
+	background: white;
 }
 
 @import "partials/code-ray";
