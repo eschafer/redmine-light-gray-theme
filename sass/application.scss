@@ -14,6 +14,10 @@ $base-font-size: 12px;
 $base-line-height: 18px;
 @include establish-baseline();
 
+$blueprint-grid-columns: 24;
+$blueprint-grid-width: 30px;
+$blueprint-grid-margin: 10px;
+
 $dark-gray: #343537;
 $medium-gray: #e0e0e0;
 $light-gray: #f8f8f8;
@@ -21,7 +25,6 @@ $white: #ffffff;
 
 #wrapper {
 	@include container;
-	width: 100%;
 	//@include showgrid;
 }
 
@@ -68,10 +71,10 @@ h1, h2, h3, h4, h5, h6, .wiki h1, .wiki h2, .wiki h3, .wiki h4, .wiki h5, .wiki 
 	@include adjust-font-size-to(24px);
 	
 	// Push the margin back to the edge in order to color the background.
-	margin: 0 0 0 -40px;
+	margin: 0 -40px $base-line-height -40px;
 	padding: $base-line-height/2 0 $base-line-height/2 40px;
 	
-	background: #f8f8f8;
+	background: $light-gray;
 	color: #666666;
 	font: {
 		size: 24px;
@@ -103,7 +106,6 @@ b, strong {
 
 
 p {
-	@include leader();
 	@include trailer();
 }
 
@@ -114,10 +116,6 @@ p {
 
 	a {
 		font-family: OpenSansRegular;
-	}
-
-	p {
-		margin-top: 0;
 	}
 }
 
@@ -151,6 +149,7 @@ li {
 
 pre {
 	padding: 0 $base-line-height;
+	background: $light-gray;
 }
 
 /* Top Menu */
@@ -238,7 +237,7 @@ pre {
 	height: 18px;
 
 	ul {
-		margin: 0;
+		margin: 0 0 0 -10px;
 		padding: 0;
 	}
 
@@ -246,31 +245,48 @@ pre {
 		float: left;
 		list-style-type: none;
 
-		margin: {
-			right: $blueprint-grid-margin;
-		}
+		margin: 0;
+		padding: 0;
 		list-style-type: none;
 
 		position: static;
-		padding: 0 10px 0 0;
 		text-indent: 0;
 	}
 
 	a {
 		text-decoration: none;
+		padding: 5px 10px;
+
+		color: #343537;
+		@include text-shadow(#ffffff 0px 1px 0px);
+
+		&.selected {
+			background: $light-gray;
+
+			@import "compass/css3/border-radius";
+			@include border-top-radius(3px);
+		}
 	}
 }
 
 /* Main */
 #main {
-	@include prepend(1);
-	@include append(1);
+	//@include prepend(1);
+	//@include append(1);
 }
 
 /* Main - Sidebar */
 #sidebar {
 	@include float-right;
-	width: 20%;
+	width: 220px;
+	
+	/*&, h1, h2, h3, h4, h5, h6 {
+		color: $medium-gray;
+	}
+
+	a {
+		color: #b8cdd1;
+	}*/
 
 	.nosidebar & {
 		display: none;
@@ -279,9 +295,10 @@ pre {
 
 /* Main - Content */
 #content {
-	@include column(14);
-	width: 78%;
+	@include column(18);
+	padding: 0 40px;
 	min-height: 600px;
+	background: #ffffff;
 	border-right: 1px solid #cccccc;
 
 	p span.my-project {
@@ -290,8 +307,27 @@ pre {
 
 	.contextual {
 		float: right;
-		margin: 0 1.5em 0 0;
 		@include leader;
+	}
+
+	.issue.details {
+		background: #FFF8D2;
+		padding: 0 18px 18px 18px;
+
+		th {
+			font-family: OpenSansSemibold;
+			text-align: right;
+			padding-right: 10px;
+		}
+
+		hr {
+			border: {
+				top: 1px solid rgba(52, 53, 55, 0.25);
+				right: none;
+				bottom: none;
+				left: none;
+			}
+		}
 	}
 
 	.wiki.wiki-page .contextual {
@@ -302,13 +338,21 @@ pre {
 	}
 
 	.splitcontentleft {
+
+		// I'm using percentages instead of columns because sometimes there's
+		// a sidebar.
 		float: left;
 		width: 50%;
+		padding-right: 10px;
 	}
 
 	.splitcontentright {
+		
+		// I'm using percentages instead of columns because sometimes there's
+		// a sidebar.
 		float: right;
 		width: 50%;
+		padding-right: 10px;
 
 		.projects.box li {
 			height: $base-line-height;
@@ -317,9 +361,9 @@ pre {
 	}
 
 	.breadcrumb {
-		margin: 0 0 0 -40px;
+		margin: 0 -40px;
 		padding: $base-line-height/2 0 0 40px;
-		background: #f8f8f8;
+		background: $light-gray;
 		height: $base-line-height;
 		font-size: 0.8em;
 	}
@@ -327,7 +371,7 @@ pre {
 	.toc {
 		float: left;
 		@include column(6);
-		margin: 1.5em 0 0 0;
+		margin: 0;
 		padding: 0;
 
 		&, ul, ol {
@@ -335,7 +379,7 @@ pre {
 		}
 
 		&.right {
-			//float: right;
+			float: right;
 		}
 	}
 
@@ -358,7 +402,7 @@ pre {
 	};
 
 	.nosidebar & {
-		width: 100%;
+		@include column(24, true);
 		border-right: 0;
 
 		h2 {

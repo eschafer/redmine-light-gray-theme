@@ -1016,12 +1016,6 @@ samp {
   font-family: BitstreamVeraSansMonoRoman;
 }
 
-/* line 37, ../sass/partials/_normalize-custom.scss */
-pre {
-  background: #272822;
-  color: #F8F8F2;
-}
-
 @font-face {
   font-family: 'OpenSansLight';
   src: url("../fonts/OpenSans-Light-webfont.eot");
@@ -1067,35 +1061,34 @@ html {
   line-height: 1.5em;
 }
 
-/* line 22, ../sass/application.scss */
+/* line 26, ../sass/application.scss */
 #wrapper {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  width: 100%;
 }
 
-/* line 28, ../sass/application.scss */
+/* line 31, ../sass/application.scss */
 a, a:link, a:visited {
   color: #00758b;
 }
 
-/* line 32, ../sass/application.scss */
+/* line 35, ../sass/application.scss */
 h1 {
   font-size: 2em;
   line-height: 1.5em;
   margin: 0.75em 0 0 0;
 }
 
-/* line 36, ../sass/application.scss */
+/* line 39, ../sass/application.scss */
 h2, .wiki h1 {
   font-size: 1.66667em;
   line-height: 1.8em;
   margin: 0.9em 0 0 0;
 }
 
-/* line 40, ../sass/application.scss */
+/* line 43, ../sass/application.scss */
 h3, .wiki h2 {
   font-size: 1.33333em;
   line-height: 2.25em;
@@ -1103,44 +1096,44 @@ h3, .wiki h2 {
   margin: 1.125em 0 0 0;
 }
 
-/* line 45, ../sass/application.scss */
+/* line 48, ../sass/application.scss */
 h4, .wiki h3 {
   font-size: 1.08333em;
   line-height: 1.38462em;
   margin: 1.38462em 0;
 }
 
-/* line 49, ../sass/application.scss */
+/* line 52, ../sass/application.scss */
 h5, .wiki h4 {
   font-size: 1em;
   line-height: 1.5em;
   margin: 1.5em 0;
 }
 
-/* line 53, ../sass/application.scss */
+/* line 56, ../sass/application.scss */
 h6, .wiki h5 {
   font-size: 0.91667em;
   line-height: 1.63636em;
   margin: 1.63636em 0;
 }
 
-/* line 57, ../sass/application.scss */
+/* line 60, ../sass/application.scss */
 .wiki h6 {
   font-size: 0.83333em;
   line-height: 1.8em;
   margin: 1.8em 0;
 }
 
-/* line 62, ../sass/application.scss */
+/* line 65, ../sass/application.scss */
 h1, h2, h3, h4, h5, h6, .wiki h1, .wiki h2, .wiki h3, .wiki h4, .wiki h5, .wiki h6 {
   color: #00648B;
 }
 
-/* line 67, ../sass/application.scss */
+/* line 70, ../sass/application.scss */
 #content > h2, #content > .wiki > h1 {
   font-size: 2em;
   line-height: 1.5em;
-  margin: 0 0 0 -40px;
+  margin: 0 -40px 18px -40px;
   padding: 9px 0 9px 40px;
   background: #f8f8f8;
   color: #666666;
@@ -1149,71 +1142,66 @@ h1, h2, h3, h4, h5, h6, .wiki h1, .wiki h2, .wiki h3, .wiki h4, .wiki h5, .wiki 
   font-weight: normal;
 }
 
-/* line 83, ../sass/application.scss */
+/* line 86, ../sass/application.scss */
 h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor, h4:hover a.wiki-anchor, h5:hover a.wiki-anchor, h6:hover a.wiki-anchor {
   display: inline;
   color: #DDD;
 }
 
-/* line 88, ../sass/application.scss */
+/* line 91, ../sass/application.scss */
 a.wiki-anchor {
   display: none;
   margin-left: 6px;
   text-decoration: none;
 }
 
-/* line 94, ../sass/application.scss */
+/* line 97, ../sass/application.scss */
 a.wiki-anchor:hover {
   color: #AAA !important;
   text-decoration: none;
 }
 
-/* line 99, ../sass/application.scss */
+/* line 102, ../sass/application.scss */
 b, strong {
   font-weight: normal;
   font-family: OpenSansSemibold;
 }
 
-/* line 105, ../sass/application.scss */
+/* line 108, ../sass/application.scss */
 p {
-  margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
 
-/* line 111, ../sass/application.scss */
+/* line 113, ../sass/application.scss */
 .box.members {
   font-family: OpenSansSemibold;
 }
-/* line 115, ../sass/application.scss */
+/* line 117, ../sass/application.scss */
 .box a {
   font-family: OpenSansRegular;
 }
-/* line 119, ../sass/application.scss */
-.box p {
-  margin-top: 0;
-}
 
 /* Apply a natural box layout model to all elements. */
-/* line 130, ../sass/application.scss */
+/* line 128, ../sass/application.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 134, ../sass/application.scss */
+/* line 132, ../sass/application.scss */
 ul, ol {
   margin: 0;
   padding: 0;
   margin-bottom: 1.5em;
 }
 
-/* line 140, ../sass/application.scss */
+/* line 138, ../sass/application.scss */
 ul ul, ul ol, ol ol, ol ul {
   margin: 0 0 0 -30px;
 }
 
-/* line 144, ../sass/application.scss */
+/* line 142, ../sass/application.scss */
 li {
   position: relative;
   left: 18px;
@@ -1222,13 +1210,14 @@ li {
   text-indent: -30px;
 }
 
-/* line 152, ../sass/application.scss */
+/* line 150, ../sass/application.scss */
 pre {
   padding: 0 18px;
+  background: #f8f8f8;
 }
 
 /* Top Menu */
-/* line 157, ../sass/application.scss */
+/* line 156, ../sass/application.scss */
 #top-menu {
   background: #343537;
   color: #e0e0e0;
@@ -1237,11 +1226,11 @@ pre {
   height: 3.6em;
   padding: 9px 0;
 }
-/* line 164, ../sass/application.scss */
+/* line 163, ../sass/application.scss */
 #top-menu > ul {
   padding-left: 40px;
 }
-/* line 168, ../sass/application.scss */
+/* line 167, ../sass/application.scss */
 #top-menu li {
   float: left;
   margin-right: 10px;
@@ -1250,30 +1239,30 @@ pre {
   padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 180, ../sass/application.scss */
+/* line 179, ../sass/application.scss */
 #top-menu a {
   color: #e0e0e0;
   text-decoration: none;
 }
-/* line 183, ../sass/application.scss */
+/* line 182, ../sass/application.scss */
 #top-menu a:hover {
   color: white;
 }
 
 /* Top Menu - Logged As */
-/* line 190, ../sass/application.scss */
+/* line 189, ../sass/application.scss */
 #loggedas {
   float: right;
 }
 
 /* Top Menu - Account */
-/* line 195, ../sass/application.scss */
+/* line 194, ../sass/application.scss */
 #account {
   float: right;
   margin-right: -10px;
   margin-left: 18px;
 }
-/* line 202, ../sass/application.scss */
+/* line 201, ../sass/application.scss */
 #account > ul {
   margin: 0 -10px 0 0;
   padding: 0;
@@ -1281,14 +1270,14 @@ pre {
 }
 
 /* Header */
-/* line 210, ../sass/application.scss */
+/* line 209, ../sass/application.scss */
 #header {
   padding-left: 40px;
   padding-right: 40px;
   height: 72px;
   background: #e0e0e0;
 }
-/* line 220, ../sass/application.scss */
+/* line 219, ../sass/application.scss */
 #header h1 {
   margin: 0;
   padding: 0.375em 0 0 0;
@@ -1300,127 +1289,165 @@ pre {
 }
 
 /* Header - Quick Search */
-/* line 231, ../sass/application.scss */
+/* line 230, ../sass/application.scss */
 #quick-search {
   float: right;
 }
 
 /* Header - Main Menu */
-/* line 236, ../sass/application.scss */
+/* line 235, ../sass/application.scss */
 #main-menu {
   margin: 0.75em 0 0 0;
   height: 18px;
 }
-/* line 240, ../sass/application.scss */
+/* line 239, ../sass/application.scss */
 #main-menu ul {
-  margin: 0;
+  margin: 0 0 0 -10px;
   padding: 0;
 }
-/* line 245, ../sass/application.scss */
+/* line 244, ../sass/application.scss */
 #main-menu li {
   float: left;
   list-style-type: none;
-  margin-right: 10px;
+  margin: 0;
+  padding: 0;
   list-style-type: none;
   position: static;
-  padding: 0 10px 0 0;
   text-indent: 0;
 }
-/* line 259, ../sass/application.scss */
+/* line 256, ../sass/application.scss */
 #main-menu a {
   text-decoration: none;
+  padding: 5px 10px;
+  color: #343537;
+  text-shadow: white 0px 1px 0px;
+}
+/* line 263, ../sass/application.scss */
+#main-menu a.selected {
+  background: #f8f8f8;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 /* Main */
-/* line 265, ../sass/application.scss */
-#main {
-  padding-left: 40px;
-  padding-right: 40px;
-}
-
 /* Main - Sidebar */
-/* line 271, ../sass/application.scss */
+/* line 279, ../sass/application.scss */
 #sidebar {
   display: inline;
   float: right;
-  width: 20%;
+  width: 220px;
+  	/*&, h1, h2, h3, h4, h5, h6 {
+  		color: $medium-gray;
+  	}
+  
+  	a {
+  		color: #b8cdd1;
+  	}*/
 }
-/* line 275, ../sass/application.scss */
+/* line 291, ../sass/application.scss */
 .nosidebar #sidebar {
   display: none;
 }
 
 /* Main - Content */
-/* line 281, ../sass/application.scss */
+/* line 297, ../sass/application.scss */
 #content {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 550px;
-  width: 78%;
+  width: 710px;
+  padding: 0 40px;
   min-height: 600px;
+  background: #ffffff;
   border-right: 1px solid #cccccc;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content {
   overflow-x: hidden;
 }
-/* line 287, ../sass/application.scss */
+/* line 304, ../sass/application.scss */
 #content p span.my-project {
   display: none;
 }
-/* line 291, ../sass/application.scss */
+/* line 308, ../sass/application.scss */
 #content .contextual {
   float: right;
-  margin: 0 1.5em 0 0;
   margin-top: 1.5em;
 }
-/* line 297, ../sass/application.scss */
+/* line 313, ../sass/application.scss */
+#content .issue.details {
+  background: #FFF8D2;
+  padding: 0 18px 18px 18px;
+}
+/* line 317, ../sass/application.scss */
+#content .issue.details th {
+  font-family: OpenSansSemibold;
+  text-align: right;
+  padding-right: 10px;
+}
+/* line 323, ../sass/application.scss */
+#content .issue.details hr {
+  border-top: 1px solid rgba(52, 53, 55, 0.25);
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+/* line 333, ../sass/application.scss */
 #content .wiki.wiki-page .contextual {
   margin: 0;
 }
-/* line 304, ../sass/application.scss */
+/* line 340, ../sass/application.scss */
 #content .splitcontentleft {
   float: left;
   width: 50%;
+  padding-right: 10px;
 }
-/* line 309, ../sass/application.scss */
+/* line 349, ../sass/application.scss */
 #content .splitcontentright {
   float: right;
   width: 50%;
+  padding-right: 10px;
 }
-/* line 313, ../sass/application.scss */
+/* line 357, ../sass/application.scss */
 #content .splitcontentright .projects.box li {
   height: 18px;
   overflow: hidden;
 }
-/* line 319, ../sass/application.scss */
+/* line 363, ../sass/application.scss */
 #content .breadcrumb {
-  margin: 0 0 0 -40px;
+  margin: 0 -40px;
   padding: 9px 0 0 40px;
   background: #f8f8f8;
   height: 18px;
   font-size: 0.8em;
 }
-/* line 327, ../sass/application.scss */
+/* line 371, ../sass/application.scss */
 #content .toc {
   float: left;
   display: inline;
   float: left;
   margin-right: 10px;
   width: 230px;
-  margin: 1.5em 0 0 0;
+  margin: 0;
   padding: 0;
 }
 /* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #content .toc {
   overflow-x: hidden;
 }
-/* line 333, ../sass/application.scss */
+/* line 377, ../sass/application.scss */
 #content .toc, #content .toc ul, #content .toc ol {
   list-style-type: none;
 }
-/* line 342, ../sass/application.scss */
+/* line 381, ../sass/application.scss */
+#content .toc.right {
+  float: right;
+}
+/* line 386, ../sass/application.scss */
 #content .toc:before {
   content: "Contents";
   font-size: 1.33333em;
@@ -1430,7 +1457,7 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 351, ../sass/application.scss */
+/* line 395, ../sass/application.scss */
 #content .attachments:before {
   content: "Attachments";
   font-size: 1.33333em;
@@ -1440,26 +1467,33 @@ pre {
   color: #00648B;
   font-family: OpenSansSemibold;
 }
-/* line 360, ../sass/application.scss */
+/* line 404, ../sass/application.scss */
 .nosidebar #content {
-  width: 100%;
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 950px;
   border-right: 0;
 }
-/* line 364, ../sass/application.scss */
+/* line 147, ../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .nosidebar #content {
+  overflow-x: hidden;
+}
+/* line 408, ../sass/application.scss */
 .nosidebar #content h2 {
   margin: 0 -50px 0 -40px;
 }
 
 /* Main - Content - Projects Index */
-/* line 373, ../sass/application.scss */
+/* line 417, ../sass/application.scss */
 #projects-index .projects.root {
   margin-top: 1.5em;
 }
-/* line 377, ../sass/application.scss */
+/* line 421, ../sass/application.scss */
 #projects-index .wiki.description {
   display: none;
 }
-/* line 381, ../sass/application.scss */
+/* line 425, ../sass/application.scss */
 #projects-index > ul > li {
   list-style-type: none;
   left: 0;
@@ -1469,11 +1503,11 @@ pre {
 }
 
 /* Main - Content - Activity */
-/* line 392, ../sass/application.scss */
+/* line 436, ../sass/application.scss */
 #activity dt {
   margin: 1.5em 0 0 0;
 }
-/* line 394, ../sass/application.scss */
+/* line 438, ../sass/application.scss */
 #activity dt span {
   display: inline;
   float: left;
@@ -1484,17 +1518,17 @@ pre {
 * html #activity dt span {
   overflow-x: hidden;
 }
-/* line 398, ../sass/application.scss */
+/* line 442, ../sass/application.scss */
 #activity dd {
   padding-left: 80px;
 }
-/* line 400, ../sass/application.scss */
+/* line 444, ../sass/application.scss */
 #activity dd .author {
   display: block;
 }
 
 /* Footer */
-/* line 407, ../sass/application.scss */
+/* line 451, ../sass/application.scss */
 #footer {
   clear: both;
   border-top: 1px solid #cccccc;
@@ -1505,102 +1539,462 @@ pre {
 }
 
 /************* CodeRay styles *************/
+/* line 2, ../sass/partials/_code-ray.scss */
+.syntaxhl div {
+  display: inline;
+}
+
+/* line 3, ../sass/partials/_code-ray.scss */
+.syntaxhl .line-numbers {
+  padding: 2px 4px 2px 4px;
+  background-color: #eee;
+  margin: 0px 5px 0px 0px;
+}
+
+/* line 4, ../sass/partials/_code-ray.scss */
+.syntaxhl .code pre {
+  overflow: auto;
+}
+
+/* line 5, ../sass/partials/_code-ray.scss */
+.syntaxhl .debug {
+  color: white !important;
+  background: blue !important;
+}
+
+/* line 7, ../sass/partials/_code-ray.scss */
+.syntaxhl .annotation {
+  color: #007;
+}
+
 /* line 8, ../sass/partials/_code-ray.scss */
 .syntaxhl .attribute-name {
-  color: #A6E22E;
+  color: #b48;
+}
+
+/* line 9, ../sass/partials/_code-ray.scss */
+.syntaxhl .attribute-value {
+  color: #700;
+}
+
+/* line 10, ../sass/partials/_code-ray.scss */
+.syntaxhl .binary {
+  color: #509;
+}
+
+/* line 11, ../sass/partials/_code-ray.scss */
+.syntaxhl .char .content {
+  color: #D20;
+}
+
+/* line 12, ../sass/partials/_code-ray.scss */
+.syntaxhl .char .delimiter {
+  color: #710;
+}
+
+/* line 13, ../sass/partials/_code-ray.scss */
+.syntaxhl .char {
+  color: #D20;
+}
+
+/* line 14, ../sass/partials/_code-ray.scss */
+.syntaxhl .class {
+  color: #258;
+  font-weight: bold;
+}
+
+/* line 15, ../sass/partials/_code-ray.scss */
+.syntaxhl .class-variable {
+  color: #369;
 }
 
 /* line 16, ../sass/partials/_code-ray.scss */
-.syntaxhl .class {
-  color: #A6E22E;
+.syntaxhl .color {
+  color: #0A0;
+}
+
+/* line 17, ../sass/partials/_code-ray.scss */
+.syntaxhl .comment {
+  color: #385;
+}
+
+/* line 18, ../sass/partials/_code-ray.scss */
+.syntaxhl .comment .char {
+  color: #385;
+}
+
+/* line 19, ../sass/partials/_code-ray.scss */
+.syntaxhl .comment .delimiter {
+  color: #385;
+}
+
+/* line 20, ../sass/partials/_code-ray.scss */
+.syntaxhl .complex {
+  color: #A08;
 }
 
 /* line 21, ../sass/partials/_code-ray.scss */
-.syntaxhl .comment {
-  color: #75715E;
+.syntaxhl .constant {
+  color: #258;
+  font-weight: bold;
+}
+
+/* line 22, ../sass/partials/_code-ray.scss */
+.syntaxhl .decorator {
+  color: #B0B;
+}
+
+/* line 23, ../sass/partials/_code-ray.scss */
+.syntaxhl .definition {
+  color: #099;
+  font-weight: bold;
 }
 
 /* line 24, ../sass/partials/_code-ray.scss */
-.syntaxhl .comment .char {
-  color: #75715E;
+.syntaxhl .delimiter {
+  color: black;
+}
+
+/* line 25, ../sass/partials/_code-ray.scss */
+.syntaxhl .directive {
+  color: #088;
+  font-weight: bold;
+}
+
+/* line 26, ../sass/partials/_code-ray.scss */
+.syntaxhl .doc {
+  color: #970;
 }
 
 /* line 27, ../sass/partials/_code-ray.scss */
-.syntaxhl .comment .delimiter {
-  color: #75715E;
+.syntaxhl .doc-string {
+  color: #D42;
+  font-weight: bold;
+}
+
+/* line 28, ../sass/partials/_code-ray.scss */
+.syntaxhl .doctype {
+  color: #34b;
+}
+
+/* line 29, ../sass/partials/_code-ray.scss */
+.syntaxhl .entity {
+  color: #800;
+  font-weight: bold;
+}
+
+/* line 30, ../sass/partials/_code-ray.scss */
+.syntaxhl .error, .syntaxhl body.bp .alert, body.bp .syntaxhl .alert {
+  color: #F00;
+  background-color: #FAA;
+}
+
+/* line 31, ../sass/partials/_code-ray.scss */
+.syntaxhl .escape {
+  color: #666;
+}
+
+/* line 32, ../sass/partials/_code-ray.scss */
+.syntaxhl .exception {
+  color: #C00;
+  font-weight: bold;
+}
+
+/* line 33, ../sass/partials/_code-ray.scss */
+.syntaxhl .float {
+  color: #06D;
+}
+
+/* line 34, ../sass/partials/_code-ray.scss */
+.syntaxhl .function {
+  color: #06B;
+  font-weight: bold;
+}
+
+/* line 35, ../sass/partials/_code-ray.scss */
+.syntaxhl .global-variable {
+  color: #d70;
+}
+
+/* line 36, ../sass/partials/_code-ray.scss */
+.syntaxhl .hex {
+  color: #02b;
+}
+
+/* line 37, ../sass/partials/_code-ray.scss */
+.syntaxhl .imaginary {
+  color: #f00;
+}
+
+/* line 38, ../sass/partials/_code-ray.scss */
+.syntaxhl .include {
+  color: #B44;
+  font-weight: bold;
+}
+
+/* line 39, ../sass/partials/_code-ray.scss */
+.syntaxhl .inline {
+  background-color: rgba(0, 0, 0, 0.07);
+  color: black;
+}
+
+/* line 40, ../sass/partials/_code-ray.scss */
+.syntaxhl .inline-delimiter {
+  font-weight: bold;
+  color: #666;
+}
+
+/* line 41, ../sass/partials/_code-ray.scss */
+.syntaxhl .instance-variable {
+  color: #33B;
+}
+
+/* line 42, ../sass/partials/_code-ray.scss */
+.syntaxhl .integer {
+  color: #06D;
 }
 
 /* line 43, ../sass/partials/_code-ray.scss */
-.syntaxhl .float {
-  color: #AE81FF;
+.syntaxhl .key .char {
+  color: #60f;
+}
+
+/* line 44, ../sass/partials/_code-ray.scss */
+.syntaxhl .key .delimiter {
+  color: #404;
+}
+
+/* line 45, ../sass/partials/_code-ray.scss */
+.syntaxhl .key {
+  color: #606;
 }
 
 /* line 46, ../sass/partials/_code-ray.scss */
-.syntaxhl .function {
-  color: #A6E22E;
+.syntaxhl .keyword {
+  color: #939;
+  font-weight: bold;
+}
+
+/* line 47, ../sass/partials/_code-ray.scss */
+.syntaxhl .label {
+  color: #970;
+  font-weight: bold;
+}
+
+/* line 48, ../sass/partials/_code-ray.scss */
+.syntaxhl .local-variable {
+  color: #963;
+}
+
+/* line 49, ../sass/partials/_code-ray.scss */
+.syntaxhl .namespace {
+  color: #707;
+  font-weight: bold;
 }
 
 /* line 50, ../sass/partials/_code-ray.scss */
-.syntaxhl .hex {
-  color: #AE81FF;
+.syntaxhl .octal {
+  color: #40E;
+}
+
+/* line 52, ../sass/partials/_code-ray.scss */
+.syntaxhl .predefined {
+  color: #369;
+  font-weight: bold;
+}
+
+/* line 53, ../sass/partials/_code-ray.scss */
+.syntaxhl .predefined-constant {
+  color: #069;
+}
+
+/* line 54, ../sass/partials/_code-ray.scss */
+.syntaxhl .predefined-type {
+  color: #0a5;
+  font-weight: bold;
+}
+
+/* line 55, ../sass/partials/_code-ray.scss */
+.syntaxhl .preprocessor {
+  color: #579;
+}
+
+/* line 56, ../sass/partials/_code-ray.scss */
+.syntaxhl .pseudo-class {
+  color: #00C;
+  font-weight: bold;
+}
+
+/* line 57, ../sass/partials/_code-ray.scss */
+.syntaxhl .regexp .content {
+  color: #808;
+}
+
+/* line 58, ../sass/partials/_code-ray.scss */
+.syntaxhl .regexp .delimiter {
+  color: #404;
 }
 
 /* line 59, ../sass/partials/_code-ray.scss */
-.syntaxhl .integer {
-  color: #AE81FF;
+.syntaxhl .regexp .modifier {
+  color: #C2C;
+}
+
+/* line 60, ../sass/partials/_code-ray.scss */
+.syntaxhl .regexp {
+  background-color: rgba(255, 0, 255, 0.06);
+}
+
+/* line 61, ../sass/partials/_code-ray.scss */
+.syntaxhl .reserved {
+  color: #080;
+  font-weight: bold;
+}
+
+/* line 62, ../sass/partials/_code-ray.scss */
+.syntaxhl .shell .content {
+  color: #2B2;
+}
+
+/* line 63, ../sass/partials/_code-ray.scss */
+.syntaxhl .shell .delimiter {
+  color: #161;
+}
+
+/* line 64, ../sass/partials/_code-ray.scss */
+.syntaxhl .shell {
+  background-color: rgba(0, 255, 0, 0.06);
+}
+
+/* line 65, ../sass/partials/_code-ray.scss */
+.syntaxhl .string .char {
+  color: #46a;
+}
+
+/* line 66, ../sass/partials/_code-ray.scss */
+.syntaxhl .string .content {
+  color: #46a;
 }
 
 /* line 67, ../sass/partials/_code-ray.scss */
-.syntaxhl .keyword {
-  color: #F92672;
+.syntaxhl .string .delimiter {
+  color: #46a;
+}
+
+/* line 68, ../sass/partials/_code-ray.scss */
+.syntaxhl .string .modifier {
+  color: #46a;
+}
+
+/* line 69, ../sass/partials/_code-ray.scss */
+.syntaxhl .symbol .content {
+  color: #d33;
+}
+
+/* line 70, ../sass/partials/_code-ray.scss */
+.syntaxhl .symbol .delimiter {
+  color: #d33;
 }
 
 /* line 71, ../sass/partials/_code-ray.scss */
-.syntaxhl .local-variable {
-  color: #F8F8F2;
+.syntaxhl .symbol {
+  color: #d33;
+}
+
+/* line 72, ../sass/partials/_code-ray.scss */
+.syntaxhl .tag {
+  color: #070;
+}
+
+/* line 73, ../sass/partials/_code-ray.scss */
+.syntaxhl .type {
+  color: #339;
+  font-weight: bold;
+}
+
+/* line 74, ../sass/partials/_code-ray.scss */
+.syntaxhl .value {
+  color: #088;
 }
 
 /* line 75, ../sass/partials/_code-ray.scss */
-.syntaxhl .octal {
-  color: #AE81FF;
+.syntaxhl .variable {
+  color: #037;
+}
+
+/* line 77, ../sass/partials/_code-ray.scss */
+.syntaxhl .insert {
+  background: rgba(0, 255, 0, 0.12);
+}
+
+/* line 78, ../sass/partials/_code-ray.scss */
+.syntaxhl .delete {
+  background: rgba(255, 0, 0, 0.12);
+}
+
+/* line 79, ../sass/partials/_code-ray.scss */
+.syntaxhl .change {
+  color: #bbf;
+  background: #007;
 }
 
 /* line 80, ../sass/partials/_code-ray.scss */
-.syntaxhl .predefined-constant {
-  color: #AE81FF;
+.syntaxhl .head {
+  color: #f8f;
+  background: #505;
+}
+
+/* line 81, ../sass/partials/_code-ray.scss */
+.syntaxhl .head .filename {
+  color: white;
 }
 
 /* line 83, ../sass/partials/_code-ray.scss */
-.syntaxhl .predefined-type {
-  color: #66D9EF;
+.syntaxhl .delete .eyecatcher {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(230, 0, 0, 0.5);
+  margin: -1px;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-/* line 96, ../sass/partials/_code-ray.scss */
-.syntaxhl .string .char {
-  color: #E6DB74;
+/* line 84, ../sass/partials/_code-ray.scss */
+.syntaxhl .insert .eyecatcher {
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid rgba(0, 128, 0, 0.5);
+  margin: -1px;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
-/* line 99, ../sass/partials/_code-ray.scss */
-.syntaxhl .string .content {
-  color: #E6DB74;
+/* line 86, ../sass/partials/_code-ray.scss */
+.syntaxhl .insert .insert {
+  color: #0c0;
+  background: transparent;
+  font-weight: bold;
 }
 
-/* line 102, ../sass/partials/_code-ray.scss */
-.syntaxhl .string .delimiter {
-  color: #E6DB74;
+/* line 87, ../sass/partials/_code-ray.scss */
+.syntaxhl .delete .delete {
+  color: #c00;
+  background: transparent;
+  font-weight: bold;
 }
 
-/* line 105, ../sass/partials/_code-ray.scss */
-.syntaxhl .string .modifier {
-  color: #E6DB74;
+/* line 88, ../sass/partials/_code-ray.scss */
+.syntaxhl .change .change {
+  color: #88f;
 }
 
-/* line 111, ../sass/partials/_code-ray.scss */
-.syntaxhl .tag {
-  color: #F92672;
+/* line 89, ../sass/partials/_code-ray.scss */
+.syntaxhl .head .head {
+  color: #f4f;
 }
 
-/* line 426, ../sass/application.scss */
+/************* CodeRay styles *************/
+/* line 470, ../sass/application.scss */
 .contextual img {
   display: none;
 }

@@ -35,21 +35,6 @@ _gaq.push(["_trackPageview"]);
 
 	redmine.updateMarkup = function() {
 		this.fixMultipleValueCustomFields();
-		this.prepoulateIssueDescription();
-	};
-
-	redmine.prepoulateIssueDescription = function() {
-		var bugTemplate = "*URL*\n\n*Steps to reproduce*\n\n*Observed result*\n\n*Expected result*";
-		var $issueDescription = $("#issue_description");
-		if ($("#issue_tracker_id option").filter(":selected").text() === "Bug") {
-			if ($issueDescription.text() === "") {
-				$issueDescription.text(bugTemplate);
-			}
-		} else {
-			if ($issueDescription.text() === bugTemplate) {
-				$issueDescription.text("");
-			}
-		}
 	};
 
 	redmine.fixMultipleValueCustomFields = function() {
