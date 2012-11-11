@@ -1849,42 +1849,42 @@ div.tabs-buttons {
 	border-bottom: 1px solid #bbbbbb;
 }
 
-button.tab-left, button.tab-right {
-	font-size: 0.9em;
-	cursor: pointer;
-	height: 24px;
-	border: 1px solid #ccc;
-	border-bottom: 1px solid #bbbbbb;
-	position: absolute;
-	padding: 4px;
-	width: 20px;
-	bottom: -1px;
-}
-
-button.tab-left {
-	right: 20px;
-	background: #eeeeee url(../images/bullet_arrow_left.png) no-repeat 50% 50%;
-	border-top-left-radius: 3px;
-}
-
-button.tab-right {
-	right: 0;
-	background: #eeeeee url(../images/bullet_arrow_right.png) no-repeat 50% 50%;
-	border-top-right-radius: 3px;
+button {
+	&.tab-left, &.tab-right {
+		font-size: 0.9em;
+		cursor: pointer;
+		height: 24px;
+		border: 1px solid #ccc;
+		border-bottom: 1px solid #bbbbbb;
+		position: absolute;
+		padding: 4px;
+		width: 20px;
+		bottom: -1px;
+	}
+	&.tab-left {
+		right: 20px;
+		background: #eeeeee url(../images/bullet_arrow_left.png) no-repeat 50% 50%;
+		border-top-left-radius: 3px;
+	}
+	&.tab-right {
+		right: 0;
+		background: #eeeeee url(../images/bullet_arrow_right.png) no-repeat 50% 50%;
+		border-top-right-radius: 3px;
+	}
 }
 
 /***** Diff *****/
 .diff_out {
 	background: #fcc;
-}
-.diff_out span {
-	background: #faa;
+	span {
+		background: #faa;
+	}
 }
 .diff_in {
 	background: #cfc;
-}
-.diff_in span {
-	background: #afa;
+	span {
+		background: #afa;
+	}
 }
 
 .text-diff {
@@ -2019,18 +2019,20 @@ div.wiki img {
 	cursor: move;
 }
 
-a.close-icon {
-	display: block;
-	margin-top: 3px;
-	overflow: hidden;
-	width: 12px;
-	height: 12px;
-	background-repeat: no-repeat;
-	cursor: pointer;
-	background-image: url('../images/close.png');
-}
-a.close-icon:hover {
-	background-image: url('../images/close_hl.png');
+a {
+	&.close-icon {
+		display: block;
+		margin-top: 3px;
+		overflow: hidden;
+		width: 12px;
+		height: 12px;
+		background-repeat: no-repeat;
+		cursor: pointer;
+		background-image: url('../images/close.png');
+	}
+	&.close-icon:hover {
+		background-image: url('../images/close_hl.png');
+	}
 }
 
 /***** Gantt chart *****/
