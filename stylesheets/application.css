@@ -59,14 +59,12 @@ h4 {
   font-size: 0.8em;
   padding: 2px 2px 0px 6px;
 }
-
-/* line 46, ../sass/application.scss */
+/* line 45, ../sass/application.scss */
 #top-menu ul {
   margin: 0;
   padding: 0;
 }
-
-/* line 50, ../sass/application.scss */
+/* line 49, ../sass/application.scss */
 #top-menu li {
   float: left;
   list-style-type: none;
@@ -74,15 +72,13 @@ h4 {
   padding: 0px 0px 0px 0px;
   white-space: nowrap;
 }
-
-/* line 57, ../sass/application.scss */
+/* line 56, ../sass/application.scss */
 #top-menu a {
   color: #fff;
   margin-right: 8px;
   font-weight: bold;
 }
-
-/* line 62, ../sass/application.scss */
+/* line 61, ../sass/application.scss */
 #top-menu #loggedas {
   float: right;
   margin-right: 0.5em;
@@ -103,13 +99,11 @@ h4 {
   padding: 4px 8px 0px 6px;
   position: relative;
 }
-
-/* line 80, ../sass/application.scss */
+/* line 79, ../sass/application.scss */
 #header a {
   color: #f8f8f8;
 }
-
-/* line 83, ../sass/application.scss */
+/* line 82, ../sass/application.scss */
 #header h1 a.ancestor {
   font-size: 80%;
 }
@@ -126,14 +120,12 @@ h4 {
   left: 6px;
   margin-right: -500px;
 }
-
-/* line 96, ../sass/application.scss */
+/* line 95, ../sass/application.scss */
 #main-menu ul {
   margin: 0;
   padding: 0;
 }
-
-/* line 100, ../sass/application.scss */
+/* line 99, ../sass/application.scss */
 #main-menu li {
   float: left;
   list-style-type: none;
@@ -141,8 +133,7 @@ h4 {
   padding: 0px 0px 0px 0px;
   white-space: nowrap;
 }
-
-/* line 107, ../sass/application.scss */
+/* line 106, ../sass/application.scss */
 #main-menu li a {
   display: block;
   color: #fff;
@@ -151,14 +142,12 @@ h4 {
   margin: 0;
   padding: 4px 10px 4px 10px;
 }
-
-/* line 115, ../sass/application.scss */
+/* line 114, ../sass/application.scss */
 #main-menu li a:hover {
   background: #759FCF;
   color: #fff;
 }
-
-/* line 119, ../sass/application.scss */
+/* line 118, ../sass/application.scss */
 #main-menu li a.selected, #main-menu li a.selected:hover {
   background: #fff;
   color: #555;
@@ -185,68 +174,55 @@ h4 {
   padding-top: 2px;
   padding-bottom: 3px;
 }
-
-/* line 141, ../sass/application.scss */
+/* line 140, ../sass/application.scss */
 #admin-menu a.projects {
   background-image: url(../images/projects.png);
 }
-
-/* line 144, ../sass/application.scss */
+/* line 143, ../sass/application.scss */
 #admin-menu a.users {
   background-image: url(../images/user.png);
 }
-
-/* line 147, ../sass/application.scss */
+/* line 146, ../sass/application.scss */
 #admin-menu a.groups {
   background-image: url(../images/group.png);
 }
-
-/* line 150, ../sass/application.scss */
+/* line 149, ../sass/application.scss */
 #admin-menu a.roles {
   background-image: url(../images/database_key.png);
 }
-
-/* line 153, ../sass/application.scss */
+/* line 152, ../sass/application.scss */
 #admin-menu a.trackers {
   background-image: url(../images/ticket.png);
 }
-
-/* line 156, ../sass/application.scss */
+/* line 155, ../sass/application.scss */
 #admin-menu a.issue_statuses {
   background-image: url(../images/ticket_edit.png);
 }
-
-/* line 159, ../sass/application.scss */
+/* line 158, ../sass/application.scss */
 #admin-menu a.workflows {
   background-image: url(../images/ticket_go.png);
 }
-
-/* line 162, ../sass/application.scss */
+/* line 161, ../sass/application.scss */
 #admin-menu a.custom_fields {
   background-image: url(../images/textfield.png);
 }
-
-/* line 165, ../sass/application.scss */
+/* line 164, ../sass/application.scss */
 #admin-menu a.enumerations {
   background-image: url(../images/text_list_bullets.png);
 }
-
-/* line 168, ../sass/application.scss */
+/* line 167, ../sass/application.scss */
 #admin-menu a.settings {
   background-image: url(../images/changeset.png);
 }
-
-/* line 171, ../sass/application.scss */
+/* line 170, ../sass/application.scss */
 #admin-menu a.plugins {
   background-image: url(../images/plugin.png);
 }
-
-/* line 174, ../sass/application.scss */
+/* line 173, ../sass/application.scss */
 #admin-menu a.info {
   background-image: url(../images/help.png);
 }
-
-/* line 177, ../sass/application.scss */
+/* line 176, ../sass/application.scss */
 #admin-menu a.server_authentication {
   background-image: url(../images/server_key.png);
 }
