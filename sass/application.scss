@@ -614,34 +614,36 @@ tr.message {
 	}
 }
 
-tr.version.closed, tr.version.closed a {
-	color: #999;
-}
-tr.version td.name {
-	padding-left: 20px;
-}
-tr.version.shared td.name {
-	background: url(../images/link.png) no-repeat 0% 70%;
-}
-tr.version td.date, tr.version td.status, tr.version td.sharing {
-	text-align: center;
-	white-space: nowrap;
+tr.version {
+	&.closed, &.closed a {
+		color: #999;
+	}
+	td.name {
+		padding-left: 20px;
+	}
+	&.shared td.name {
+		background: url(../images/link.png) no-repeat 0% 70%;
+	}
+	td.date, td.status, td.sharing {
+		text-align: center;
+		white-space: nowrap;
+	}
 }
 
-tr.user td {
-	width: 13%;
-}
-tr.user td.email {
-	width: 18%;
-}
-tr.user td {
-	white-space: nowrap;
-}
-tr.user.locked, tr.user.registered {
-	color: #aaa;
-}
-tr.user.locked a, tr.user.registered a {
-	color: #aaa;
+tr.user {
+	td {
+		width: 13%;
+		&.email {
+			width: 18%;
+		}
+		white-space: nowrap;
+	}
+	&.locked, &.registered {
+		color: #aaa;
+		a {
+			color: #aaa;
+		}
+	}
 }
 
 table.permissions td.role {
