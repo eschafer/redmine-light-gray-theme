@@ -241,20 +241,17 @@ h4 {
   padding: 0;
   margin: 0;
 }
-
-/* line 193, ../sass/application.scss */
+/* line 192, ../sass/application.scss */
 * html #sidebar {
   width: 22%;
 }
-
-/* line 196, ../sass/application.scss */
+/* line 195, ../sass/application.scss */
 #sidebar h3 {
   font-size: 14px;
   margin-top: 14px;
   color: #666;
 }
-
-/* line 201, ../sass/application.scss */
+/* line 200, ../sass/application.scss */
 #sidebar hr {
   width: 100%;
   margin: 0 auto;
@@ -262,16 +259,14 @@ h4 {
   background: #ccc;
   border: 0;
 }
-
-/* line 208, ../sass/application.scss */
+/* line 207, ../sass/application.scss */
 * html #sidebar hr {
   width: 95%;
   position: relative;
   left: -6px;
   color: #ccc;
 }
-
-/* line 214, ../sass/application.scss */
+/* line 213, ../sass/application.scss */
 #sidebar .contextual {
   margin-right: 1em;
 }
