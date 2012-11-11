@@ -1793,53 +1793,50 @@ p {
 	margin-bottom: 1.2em;
 	position: relative;
 	overflow: hidden;
-}
-#content .tabs ul {
-	margin: 0;
-	position: absolute;
-	bottom: 0;
-	padding-left: 0.5em;
-	width: 2000px;
-	border-bottom: 1px solid #bbbbbb;
-}
-#content .tabs ul li {
-	float: left;
-	list-style-type: none;
-	white-space: nowrap;
-	margin-right: 4px;
-	background: #fff;
-	position: relative;
-	margin-bottom: -1px;
-}
-#content .tabs ul li a {
-	display: block;
-	font-size: 0.9em;
-	text-decoration: none;
-	line-height: 1.3em;
-	padding: 4px 6px 4px 6px;
-	border: 1px solid #ccc;
-	border-bottom: 1px solid #bbbbbb;
-	background-color: #f6f6f6;
-	color: #999;
-	font-weight: bold;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
-}
-
-#content .tabs ul li a:hover {
-	background-color: #ffffdd;
-	text-decoration: none;
-}
-
-#content .tabs ul li a.selected {
-	background-color: #fff;
-	border: 1px solid #bbbbbb;
-	border-bottom: 1px solid #fff;
-	color: #444;
-}
-
-#content .tabs ul li a.selected:hover {
-	background-color: #fff;
+	ul {
+		margin: 0;
+		position: absolute;
+		bottom: 0;
+		padding-left: 0.5em;
+		width: 2000px;
+		border-bottom: 1px solid #bbbbbb;
+		li {
+			float: left;
+			list-style-type: none;
+			white-space: nowrap;
+			margin-right: 4px;
+			background: #fff;
+			position: relative;
+			margin-bottom: -1px;
+			a {
+				display: block;
+				font-size: 0.9em;
+				text-decoration: none;
+				line-height: 1.3em;
+				padding: 4px 6px 4px 6px;
+				border: 1px solid #ccc;
+				border-bottom: 1px solid #bbbbbb;
+				background-color: #f6f6f6;
+				color: #999;
+				font-weight: bold;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				&:hover {
+					background-color: #ffffdd;
+					text-decoration: none;
+				}
+				&.selected {
+					background-color: #fff;
+					border: 1px solid #bbbbbb;
+					border-bottom: 1px solid #fff;
+					color: #444;
+				}
+				&.selected:hover {
+					background-color: #fff;
+				}
+			}
+		}
+	}
 }
 
 div.tabs-buttons {
