@@ -578,13 +578,13 @@ ol {
 
 table.files tr.file td {
 	text-align: center;
-}
-table.files tr.file td.filename {
-	text-align: left;
-	padding-left: 24px;
-}
-table.files tr.file td.digest {
-	font-size: 80%;
+	&.filename {
+		text-align: left;
+		padding-left: 24px;
+	}
+	&.digest {
+		font-size: 80%;
+	}
 }
 
 table.members td.roles, table.memberships td.roles {
@@ -593,23 +593,25 @@ table.members td.roles, table.memberships td.roles {
 
 tr.message {
 	height: 2.6em;
-}
-tr.message td.subject {
-	padding-left: 20px;
-}
-tr.message td.created_on {
-	white-space: nowrap;
-}
-tr.message td.last_message {
-	font-size: 80%;
-	white-space: nowrap;
-}
-tr.message.locked td.subject {
-	background: url(../images/locked.png) no-repeat 0 1px;
-}
-tr.message.sticky td.subject {
-	background: url(../images/bullet_go.png) no-repeat 0 1px;
-	font-weight: bold;
+	td {
+		&.subject {
+			padding-left: 20px;
+		}
+		&.created_on {
+			white-space: nowrap;
+		}
+		&.last_message {
+			font-size: 80%;
+			white-space: nowrap;
+		}
+	}
+	&.locked td.subject {
+		background: url(../images/locked.png) no-repeat 0 1px;
+	}
+	&.sticky td.subject {
+		background: url(../images/bullet_go.png) no-repeat 0 1px;
+		font-weight: bold;
+	}
 }
 
 tr.version.closed, tr.version.closed a {
