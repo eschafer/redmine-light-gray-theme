@@ -324,12 +324,16 @@ a {
 		border: 0;
 	}
 
-	&.issue.closed, &.issue.closed:link, &.issue.closed:visited {
-		color: #999;
-		text-decoration: line-through;
+	&.issue.closed {
+		&, &:link, &:visited {
+			color: #999;
+			text-decoration: line-through;
+		}
 	}
-	&.project.closed, &.project.closed:link, &.project.closed:visited {
-		color: #999;
+	&.project.closed {
+		&, &:link, &:visited {
+			color: #999;
+		}
 	}
 
 	#sidebar &.selected {
