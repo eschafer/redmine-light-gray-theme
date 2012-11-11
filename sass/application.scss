@@ -1647,18 +1647,16 @@ div.flash.warning, .conflict {
 	padding: 0.6em;
 	z-index: 100;
 	opacity: 0.5;
-}
-
-html > body #ajax-indicator {
-	position: fixed;
-}
-
-#ajax-indicator span {
-	background-position: 0% 40%;
-	background-repeat: no-repeat;
-	background-image: url(../images/loading.gif);
-	padding-left: 26px;
-	vertical-align: bottom;
+	html > body & {
+		position: fixed;
+	}
+	span {
+		background-position: 0% 40%;
+		background-repeat: no-repeat;
+		background-image: url(../images/loading.gif);
+		padding-left: 26px;
+		vertical-align: bottom;
+	}
 }
 
 /***** Calendar *****/
