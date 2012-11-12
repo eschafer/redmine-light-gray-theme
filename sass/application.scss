@@ -1,8 +1,39 @@
+@import "partials/fonts";
+
+$dark-gray: #343537;
+$medium-gray: #e0e0e0;
+$light-gray: #f8f8f8;
+$white: #ffffff;
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 1.5em;
+}
+
+ul ul, ul ol, ol ol, ol ul {
+	margin: 0 0 0 -30px;
+}
+
+li {
+	position: relative;
+	left: 18px;
+	margin: 0 18px 0 0;
+	padding: 0 0 0 30px;
+	text-indent: -30px;
+}
+
 html {
 	overflow-y: scroll;
 }
 body {
-	font-family: Verdana, sans-serif;
+	font-family: OpenSansRegular;
 	font-size: 12px;
 	color: #484848;
 	margin: 0;
@@ -11,7 +42,8 @@ body {
 }
 
 h1, h2, h3, h4 {
-	font-family: "Trebuchet MS", Verdana, sans-serif;
+	font-family: OpenSansSemibold;
+	font-weight: normal;
 	padding: 2px 10px 1px 0px;
 	margin: 0 0 10px 0;
 }
@@ -37,11 +69,11 @@ h4 {
 }
 
 #top-menu {
-	background: #3E5B76;
-	color: #fff;
-	height: 1.8em;
-	font-size: 0.8em;
-	padding: 2px 2px 0px 6px;
+	background: $dark-gray;
+	color: $light-gray;
+	height: 3em;
+	font-size: 10px;
+	padding: 6px 12px 0px 18px;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -52,16 +84,17 @@ h4 {
 		margin: 0px 0px 0px 0px;
 		padding: 0px 0px 0px 0px;
 		white-space: nowrap;
+		left: 0;
+		text-indent: 0;
 	}
 	a {
-		color: #fff;
+		color: $light-gray;
 		margin-right: 8px;
-		font-weight: bold;
 	}
 	#loggedas {
 		float: right;
 		margin-right: 0.5em;
-		color: #fff;
+		color: $light-gray;
 	}
 }
 
@@ -70,17 +103,21 @@ h4 {
 }
 
 #header {
-	height: 5.3em;
+	height: 6em;
 	margin: 0;
-	background-color: #628DB6;
-	color: #f8f8f8;
-	padding: 4px 8px 0px 6px;
+	background-color: $medium-gray;
+	color: $dark-gray;
+	text-shadow: #ffffff 0px 1px 0px;
+	padding: 4px 18px 0px 18px;
 	position: relative;
 	a {
-		color: #f8f8f8;
+		color: $dark-gray;
 	}
-	h1 a.ancestor {
-		font-size: 80%;
+	h1 {
+		font-family: OpenSansRegular;
+		a.ancestor {
+			font-size: 80%;
+		}
 	}
 }
 #quick-search {
@@ -90,8 +127,9 @@ h4 {
 #main-menu {
 	position: absolute;
 	bottom: 0px;
-	left: 6px;
+	left: 0;
 	margin-right: -500px;
+	padding-left: 8px;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -102,20 +140,21 @@ h4 {
 		margin: 0px 2px 0px 0px;
 		padding: 0px 0px 0px 0px;
 		white-space: nowrap;
+		left: 0;
+		text-indent: 0;
 		a {
 			display: block;
-			color: #fff;
+			color: $dark-gray;
 			text-decoration: none;
-			font-weight: bold;
 			margin: 0;
 			padding: 4px 10px 4px 10px;
 			&:hover {
-				background: #759FCF;
-				color: #fff;
+				text-decoration: underline;
+				color: $dark-gray;
 			}
 			&.selected, &.selected:hover {
 				background: #fff;
-				color: #555;
+				color: $dark-gray;
 			}
 		}
 	}
@@ -180,7 +219,7 @@ h4 {
 }
 
 #main {
-	background-color: #EEEEEE;
+	background-color: $light-gray;
 }
 
 #sidebar {
@@ -217,14 +256,14 @@ h4 {
 }
 
 #content {
-	width: 75%;
+	width: 76%;
 	background-color: #fff;
 	margin: 0px;
 	border-right: 1px solid #ddd;
-	padding: 6px 10px 10px 10px;
+	padding: 6px 18px 10px 18px;
 	z-index: 10;
 	* html & {
-		width: 75%;
+		width: 76%;
 		padding-left: 0;
 		margin-top: 0px;
 		padding: 6px 10px 10px 10px;
@@ -1291,8 +1330,8 @@ ul.projects li {
 	margin-top: 1em;
 }
 #projects-index ul.projects div.root a.project {
-	font-family: "Trebuchet MS", Verdana, sans-serif;
-	font-weight: bold;
+	font-family: OpenSansSemibold;
+	font-weight: normal;
 	font-size: 16px;
 	margin: 0 0 10px 0;
 }
@@ -1810,6 +1849,8 @@ p {
 			background: #fff;
 			position: relative;
 			margin-bottom: -1px;
+			text-indent: 0;
+			padding: 0;
 			a {
 				display: block;
 				font-size: 0.9em;
