@@ -29,6 +29,11 @@ li {
 	text-indent: -30px;
 }
 
+th {
+	font-family: OpenSansSemibold;
+	font-weight: normal;
+}
+
 .wiki {
 	word-wrap: break-word;
 }
@@ -318,7 +323,7 @@ h4 {
 		}
 	}
 	label {
-		font-weight: bold;
+		font-family: OpenSansSemibold;
 	}
 	input {
 		&#username, &#password {
@@ -731,7 +736,7 @@ table.plugins td.configure {
 	padding-right: 1em;
 }
 table.plugins span.name {
-	font-weight: bold;
+	font-family: OpenSansSemibold;
 	display: block;
 	margin-bottom: 6px;
 }
@@ -1431,7 +1436,7 @@ html > body .tabular p {
 }
 
 .tabular label {
-	font-weight: bold;
+	font-family: OpenSansSemibold;
 	float: left;
 	text-align: right;
 	/* width of left column */
@@ -1870,7 +1875,7 @@ p {
 				border-bottom: 1px solid #bbbbbb;
 				background-color: #f6f6f6;
 				color: #999;
-				font-weight: bold;
+				font-family: OpenSansSemibold;
 				border-top-left-radius: 3px;
 				border-top-right-radius: 3px;
 				&:hover {
