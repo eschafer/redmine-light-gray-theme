@@ -29,6 +29,10 @@ li {
 	text-indent: -30px;
 }
 
+.wiki {
+	word-wrap: break-word;
+}
+
 html {
 	overflow-y: scroll;
 }
@@ -274,6 +278,11 @@ h4 {
 	* html body & {
 		height: 600px;
 	} /* IE */
+
+	// This is to wrap homepage links.
+	.splitcontentleft > ul > li > a {
+		word-wrap: break-word;
+	}
 }
 
 #main.nosidebar {
@@ -856,7 +865,7 @@ div.projects h3 {
 }
 #watchers li {
 	list-style-type: none;
-	margin: 0px 2px 0px 0px;
+	margin: 0px 2px 0px 12px;
 	padding: 0px 0px 0px 0px;
 }
 #watchers select {
@@ -904,7 +913,7 @@ span.search_for_watchers a, span.add_attachment a {
 }
 
 .box {
-	padding: 6px;
+	padding: 9px 18px;
 	margin-bottom: 10px;
 	background-color: #f6f6f6;
 	color: #505050;
