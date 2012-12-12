@@ -65,10 +65,10 @@ h1, h2, h3, h4 {
 h2, .wiki h1 {
 	font-size: 20px;
 }
-h3, .wiki h2 {
+h3, .wiki h2, #projects-index .wiki h1, #content .projects.box h1 {
 	font-size: 16px;
 }
-h4, .wiki h3 {
+h4, .wiki h3, #projects-index .wiki h2, #content .projects.box h2 {
 	font-size: 13px;
 }
 h4 {
@@ -290,6 +290,11 @@ h4 {
 	// This is to wrap homepage links.
 	.splitcontentleft > ul > li > a {
 		word-wrap: break-word;
+	}
+
+	// Hide the "My projects" text on the projects page
+	& > p > span.my-project {
+		display: none;
 	}
 }
 
@@ -1344,10 +1349,18 @@ ul.projects li {
 		}
 		li {
 			&.root {
-				margin-bottom: 1em;
+				margin-bottom: 2em;
 			}
 			&.child {
 				margin-top: 1em;
+			}
+			.project {
+				//display: block;
+				//border-bottom: 1px solid #ccc;
+			}
+			.wiki.description {
+				//margin-left: 20px;
+
 			}
 		}
 		div.root a.project {
@@ -1355,12 +1368,10 @@ ul.projects li {
 			font-weight: normal;
 			font-size: 16px;
 			margin: 0 0 10px 0;
+			display: block;
+			border-bottom: 1px solid #CCC;
 		}
 	}
-}
-.my-project {
-	padding-left: 18px;
-	background: url(../images/fav.png) no-repeat 0 50%;
 }
 
 #notified-projects ul, #tracker_project_ids ul {
