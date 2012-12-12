@@ -4,7 +4,6 @@
 	var redmine = {};
 
 	redmine.init = function() {
-
 		this.updateMarkup();
 
 		// Override
@@ -22,7 +21,39 @@
 	};
 
 	redmine.updateMarkup = function() {
+		this.addBugDescriptionDefaultText();
 		this.fixMultipleValueCustomFields();
+	};
+
+	redmine.addBugDescriptionDefaultText = function() {
+		var defaultText = "*URL:*\n\n\n*Steps to reproduce:*\n# \n# \n\n*Observed result:*\n\n\n*Expected result:*\n\n\n*Notes:*\n";
+
+		// Check to see if we're on the new bug page.
+		var regex = /\/redmine\/projects\/[a-z0-9\-_]+\/issues\/new/;
+		var success = regex.exec(window.location.pathname);
+		if (success) {
+
+			// Check to see which tracker is selected.
+			$("#issue_tracker_id").children().each(function() {
+				var $issueDescription = $("#issue_description");
+
+				if ($(this).text() === "Bug" && $(this).attr("selected") === "selected") {
+
+					// If the bug tracker is selected, and no description has been entered,
+					// fill with default text.
+					if ($issueDescription.text() === "") {
+						$issueDescription.text(defaultText);
+					}
+				} else if ($(this).text() !== "Bug" && $(this).attr("selected") === "selected") {
+
+					// If the another tracker is selected, and the description is filled
+					// with the default bug text, clear it.
+					if ($issueDescription.text() === defaultText) {
+						$issueDescription.text("");
+					}
+				}
+			});
+		}
 	};
 
 	redmine.fixMultipleValueCustomFields = function() {
