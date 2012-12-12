@@ -11,7 +11,10 @@ $white: #ffffff;
 	box-sizing: border-box;
 }
 
-ul, ol {
+/*
+ * I'd like to use these styles, but they break the toc.
+ */
+/*ul, ol {
 	margin: 0;
 	padding: 0;
 	margin-bottom: 1.5em;
@@ -27,7 +30,7 @@ li {
 	margin: 0 18px 0 0;
 	padding: 0 0 0 30px;
 	text-indent: -30px;
-}
+}*/
 
 th {
 	font-family: OpenSansSemibold;
@@ -2057,6 +2060,7 @@ h1:hover a.wiki-anchor, h2:hover a.wiki-anchor, h3:hover a.wiki-anchor {
 
 div.wiki img {
 	vertical-align: middle;
+	max-width: 100%;
 }
 
 /***** My page layout *****/
