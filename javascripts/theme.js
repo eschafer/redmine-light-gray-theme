@@ -49,7 +49,6 @@
 						// Watch to see if the user deletes the default text.
 						// If he or she does, show a warning message.
 						$issueDescription.keyup(function() {
-							console.log("keyup");
 							var description = $(this).val();
 							var $descriptionWarning = $("#description-warning");
 							if (description.indexOf("*URL:*") === -1 ||
