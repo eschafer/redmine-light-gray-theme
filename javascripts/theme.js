@@ -37,35 +37,41 @@
 			// Check to see which tracker is selected.
 			$("#issue_tracker_id").children().each(function() {
 
-				if ($(this).text() === "Bug" && $(this).attr("selected") === "selected") {
+				if ($(this).text() === "Bug") {
+					if ($(this).attr("selected") === "selected") {
 
-					// If the bug tracker is selected, and no description has been entered,
-					// fill with default text.
-					if ($issueDescription.text() === "") {
-						$issueDescription.text(defaultText);
+						// If the bug tracker is selected, and no description has been entered,
+						// fill with default text.
+						if ($issueDescription.text() === "") {
+							$issueDescription.text(defaultText);
+						}
+
+						// Watch to see if the user deletes the default text.
+						// If he or she does, show a warning message.
+						$issueDescription.keyup(function() {
+							console.log("keyup");
+							var description = $(this).val();
+							var $descriptionWarning = $("#description-warning");
+							if (description.indexOf("*URL:*") === -1 ||
+									description.indexOf("*Steps to reproduce:*") === -1 ||
+									description.indexOf("*Observed result:*") === -1 ||
+									description.indexOf("*Expected result:*") === -1) {
+								$descriptionWarning.remove();
+								$(this).parent().append("<div id=\"description-warning\" class=\"flash error\">Please include a url, steps to reproduce, observed results, and expected results in your description.  This is important information that developers need in order to reproduce and fix the bug.</div>");
+							} else {
+								$descriptionWarning.remove();
+							}
+						});
 					}
-				} else if ($(this).text() !== "Bug" && $(this).attr("selected") === "selected") {
-
-					// If the another tracker is selected, and the description is filled
-					// with the default bug text, clear it.
-					if ($issueDescription.text().split(/\r\n|\r|\n/).join("") === defaultText.split(/\r\n|\r|\n/).join("")) {
-						$issueDescription.text("");
-					}
-				}
-			});
-
-			// Watch to see if the user deletes the default text.
-			$issueDescription.keyup(function() {
-				var description = $(this).val();
-				var $descriptionWarning = $("#description-warning");
-				if (description.indexOf("*URL:*") === -1 ||
-						description.indexOf("*Steps to reproduce:*") === -1 ||
-						description.indexOf("*Observed result:*") === -1 ||
-						description.indexOf("*Expected result:*") === -1) {
-					$descriptionWarning.remove();
-					$(this).parent().append("<div id=\"description-warning\" class=\"flash error\">Please include a url, steps to reproduce, observed results, and expected results in your description.  This is important information that developers need in order to reproduce and fix the bug.</div>");
 				} else {
-					$descriptionWarning.remove();
+					if ($(this).attr("selected") === "selected") {
+
+						// If the another tracker is selected, and the description is filled
+						// with the default bug text, clear it.
+						if ($issueDescription.text().split(/\r\n|\r|\n/).join("") === defaultText.split(/\r\n|\r|\n/).join("")) {
+							$issueDescription.text("");
+						}
+					}
 				}
 			});
 		}
