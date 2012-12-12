@@ -26,7 +26,7 @@
 	};
 
 	redmine.addBugDescriptionDefaultText = function() {
-		var defaultText = "*URL:*\n\n\n*Steps to reproduce:*\n# \n# \n\n*Observed result:*\n\n\n*Expected result:*\n\n\n*Notes:*\n";
+		var defaultText = "*URL:*\r\n\r\n\r\n*Steps to reproduce:*\r\n# \r\n# \r\n\r\n*Observed result:*\r\n\r\n\r\n*Expected result:*\r\n\r\n\r\n*Notes:*\r\n";
 
 		// Check to see if we're on the new bug page.
 		var regex = /\/redmine\/projects\/[a-z0-9\-_]+\/issues\/new/;
@@ -48,7 +48,7 @@
 
 					// If the another tracker is selected, and the description is filled
 					// with the default bug text, clear it.
-					if ($issueDescription.text() === defaultText) {
+					if ($issueDescription.text().split(/\r\n|\r|\n/).join("") === defaultText.split(/\r\n|\r|\n/).join("")) {
 						$issueDescription.text("");
 					}
 				}
