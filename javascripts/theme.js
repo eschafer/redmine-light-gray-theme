@@ -26,7 +26,7 @@
 	};
 
 	redmine.addBugDescriptionDefaultText = function() {
-		var defaultText = "*URL:*\r\n\r\n\r\n*Steps to reproduce:*\r\n# \r\n# \r\n\r\n*Observed result:*\r\n\r\n\r\n*Expected result:*\r\n\r\n\r\n*Notes:*\r\n";
+		var defaultText = "*URL:*\r\r\r*Steps to reproduce:*\r# \r# \r\r*Observed result:*\r\r\r*Expected result:*\r\r\r*Notes:*\r";
 
 		// Check to see if we're on the new bug page.
 		var regex = /\/redmine\/projects\/[a-z0-9\-_]+\/issues\/new/;
