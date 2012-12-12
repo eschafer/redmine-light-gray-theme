@@ -32,10 +32,10 @@
 		var regex = /\/redmine\/projects\/[a-z0-9\-_]+\/issues\/new/;
 		var success = regex.exec(window.location.pathname);
 		if (success) {
+			var $issueDescription = $("#issue_description");
 
 			// Check to see which tracker is selected.
 			$("#issue_tracker_id").children().each(function() {
-				var $issueDescription = $("#issue_description");
 
 				if ($(this).text() === "Bug" && $(this).attr("selected") === "selected") {
 
@@ -51,6 +51,21 @@
 					if ($issueDescription.text().split(/\r\n|\r|\n/).join("") === defaultText.split(/\r\n|\r|\n/).join("")) {
 						$issueDescription.text("");
 					}
+				}
+			});
+
+			// Watch to see if the user deletes the default text.
+			$issueDescription.keyup(function() {
+				var description = $(this).val();
+				var $descriptionWarning = $("#description-warning");
+				if (description.indexOf("*URL:*") === -1 ||
+						description.indexOf("*Steps to reproduce:*") === -1 ||
+						description.indexOf("*Observed result:*") === -1 ||
+						description.indexOf("*Expected result:*") === -1) {
+					$descriptionWarning.remove();
+					$(this).parent().append("<div id=\"description-warning\" class=\"flash error\">Please include a url, steps to reproduce, observed results, and expected results in your description.  This is important information that developers need in order to reproduce and fix the bug.</div>");
+				} else {
+					$descriptionWarning.remove();
 				}
 			});
 		}
