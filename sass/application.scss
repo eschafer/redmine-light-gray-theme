@@ -1336,21 +1336,27 @@ ul.projects li {
 	list-style-type: none;
 }
 
-#projects-index ul.projects ul.projects {
-	border-left: 3px solid #e0e0e0;
-	padding-left: 1em;
-}
-#projects-index ul.projects li.root {
-	margin-bottom: 1em;
-}
-#projects-index ul.projects li.child {
-	margin-top: 1em;
-}
-#projects-index ul.projects div.root a.project {
-	font-family: OpenSansSemibold;
-	font-weight: normal;
-	font-size: 16px;
-	margin: 0 0 10px 0;
+#projects-index {
+	ul.projects {
+		ul.projects {
+			border-left: 3px solid #e0e0e0;
+			padding-left: 1em;
+		}
+		li {
+			&.root {
+				margin-bottom: 1em;
+			}
+			&.child {
+				margin-top: 1em;
+			}
+		}
+		div.root a.project {
+			font-family: OpenSansSemibold;
+			font-weight: normal;
+			font-size: 16px;
+			margin: 0 0 10px 0;
+		}
+	}
 }
 .my-project {
 	padding-left: 18px;
